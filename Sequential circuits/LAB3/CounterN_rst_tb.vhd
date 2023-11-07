@@ -23,7 +23,7 @@ Architecture CounterN_tb_rst_arch of CounterN_rst_tb is
   process
     variable delay: time := 10 ns;
     begin
-    boucle: while (True) loop
+    boucle: while (True) loop --Or use while now < 1000ns --
       for i in 0 to 7 loop -- to obtain 1 cycle
         CLK <= CLK_src(i);
         R <= R_src(i);
