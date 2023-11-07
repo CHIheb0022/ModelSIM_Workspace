@@ -1,0 +1,41 @@
+In this note, we will focus on the reset nature of counters (synchronous/asynchronous):
+
+Before we dive into the subject, let's discuss a crucial concept related to explicit processes: "Sensitivity list."
+
+Process(X): This process is only sensitive to the CLK signal. It means that the process will execute only when there is a change (rising or falling edge) on the CLK signal. The process completely ignores the RST signal. If we have another signal Y within the process: If Y is triggered (rising or falling edge), this change will affect the logic within the process only if X has already changed. Otherwise, the process will ignore the Y signal.
+
+Process(X, Y): This process is sensitive to both the X and Y signals. It means that the process will execute whenever there is a change (rising or falling edge) on either the X or Y signal.
+
+**Asynchronous Reset:
+
+In the code block below, we use an asynchronous reset. This process considers the Reset signal regardless of the CLK signal's state. If we remove Reset from the sensitivity list, the reset signal will only be considered when CLK changes state (falling or rising).
+
+
+Begin
+  Process(CLK, RESET)
+    begin
+      if Reset = '1' then
+        S <= "000";
+      elsif rising_edge(CLK) then
+        S <= S + 1;
+      end if;
+    end process;
+
+**Synchronous Reset:
+
+In the code block below, we use a synchronous reset. Here, we don't need to include Reset in the sensitivity list since the reset signal will be considered only on CLK events.
+
+Begin
+  Process(CLK)
+    begin
+      if rising_edge(CLK) then
+        if Reset = '1' then
+          S <= "000";
+        else
+          S <= S + 1;
+          Qbar <= not D;
+        end if;
+      end if;
+    end process;
+
+In summary, removing the RESET signal from the sensitivity list doesn't mean you have a synchronous counter. To create a synchronous counter, you should add the clock event (falling or rising) that drives output changes and check the reset signal within the if condition when that event occurs.
