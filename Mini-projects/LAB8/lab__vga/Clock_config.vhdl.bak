@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all ;
+use ieee.std_logic_unsigned.all ;
+
+entity CLK_divider is
+ port(   
+         clk_50 :IN std_logic ;
+        clk_25 : OUT std_logic
+		) ;
+end entity ;
+
+architecture CLK_divider_Arch of CLK_divider is
+
+signal clk_25signal :std_logic:='1' ;
+ begin
+
+process(clk_50)
+begin
+     if (clk_50'event and clk_50='1' ) then 
+         clk_25signal<= not clk_25signal;
+        
+      end if;
+     
+      
+end process ;
+ clk_25<=clk_25signal;
+end CLK_divider_Arch ;
+
+--Copy Right TOTO

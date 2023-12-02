@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164.all ;
+use ieee.std_logic_unsigned.all ;
+
+entity RGB_GEN is
+       port(   x,y : IN integer ;
+         sw :IN std_logic_vector(9 downto 0) ;
+         R,G,B : OUT std_logic_vector(9 downto 0)
+		     ) ;
+end entity ;
+
+architecture RGB_GEN_Arch of RGB_GEN is
+
+
+ begin
+process(y)
+begin
+        R<= sw;
+		  G<= sw;
+		  B<= sw;
+--      if(x<213) then 
+--            R<="1111111111";
+--            G<="0000000000";
+--            B<="0000000000";
+--      elsif (x<426) then 
+--            R<="0000000000";
+--            G<="1111111111";
+--            B<="0000000000";
+--      elsif (426<x) then 
+--            R<="0000000000";
+--            G<="0000000000";
+--            B<="1111111111";
+--      end if ;
+--      
+end process;
+end RGB_GEN_Arch ;
+
+--Copy Right TOTO

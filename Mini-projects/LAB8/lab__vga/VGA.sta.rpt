@@ -1,0 +1,1603 @@
+TimeQuest Timing Analyzer report for VGA
+Wed Oct 20 10:20:48 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'VGA_CTRL_CLK'
+ 12. Slow Model Setup: 'CLOCK_50'
+ 13. Slow Model Hold: 'CLOCK_50'
+ 14. Slow Model Hold: 'VGA_CTRL_CLK'
+ 15. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 16. Slow Model Minimum Pulse Width: 'VGA_CTRL_CLK'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'VGA_CTRL_CLK'
+ 29. Fast Model Setup: 'CLOCK_50'
+ 30. Fast Model Hold: 'CLOCK_50'
+ 31. Fast Model Hold: 'VGA_CTRL_CLK'
+ 32. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 33. Fast Model Minimum Pulse Width: 'VGA_CTRL_CLK'
+ 34. Setup Times
+ 35. Hold Times
+ 36. Clock to Output Times
+ 37. Minimum Clock to Output Times
+ 38. Propagation Delay
+ 39. Minimum Propagation Delay
+ 40. Multicorner Timing Analysis Summary
+ 41. Setup Times
+ 42. Hold Times
+ 43. Clock to Output Times
+ 44. Minimum Clock to Output Times
+ 45. Progagation Delay
+ 46. Minimum Progagation Delay
+ 47. Setup Transfers
+ 48. Hold Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; VGA                                                               ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                     ;
++--------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------+
+; Clock Name   ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets          ;
++--------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------+
+; CLOCK_50     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }     ;
+; VGA_CTRL_CLK ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_CTRL_CLK } ;
++--------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------+
+
+
++---------------------------------------------------+
+; Slow Model Fmax Summary                           ;
++-----------+-----------------+--------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name   ; Note ;
++-----------+-----------------+--------------+------+
+; 342.0 MHz ; 342.0 MHz       ; VGA_CTRL_CLK ;      ;
++-----------+-----------------+--------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------+
+; Slow Model Setup Summary              ;
++--------------+--------+---------------+
+; Clock        ; Slack  ; End Point TNS ;
++--------------+--------+---------------+
+; VGA_CTRL_CLK ; -1.924 ; -34.017       ;
+; CLOCK_50     ; 1.996  ; 0.000         ;
++--------------+--------+---------------+
+
+
++---------------------------------------+
+; Slow Model Hold Summary               ;
++--------------+--------+---------------+
+; Clock        ; Slack  ; End Point TNS ;
++--------------+--------+---------------+
+; CLOCK_50     ; -1.726 ; -1.726        ;
+; VGA_CTRL_CLK ; 0.391  ; 0.000         ;
++--------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------------+--------+----------------+
+; Clock        ; Slack  ; End Point TNS  ;
++--------------+--------+----------------+
+; CLOCK_50     ; -1.380 ; -2.380         ;
+; VGA_CTRL_CLK ; -0.500 ; -22.000        ;
++--------------+--------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'VGA_CTRL_CLK'                                                                                        ;
++--------+--------------------+--------------------+--------------+--------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------+--------------+--------------+------------+------------+
+; -1.924 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.962      ;
+; -1.924 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.962      ;
+; -1.924 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.962      ;
+; -1.924 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.962      ;
+; -1.924 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.962      ;
+; -1.924 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.962      ;
+; -1.924 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.962      ;
+; -1.924 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.962      ;
+; -1.924 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.962      ;
+; -1.924 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.962      ;
+; -1.892 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.930      ;
+; -1.892 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.930      ;
+; -1.892 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.930      ;
+; -1.892 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.930      ;
+; -1.892 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.930      ;
+; -1.892 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.930      ;
+; -1.892 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.930      ;
+; -1.892 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.930      ;
+; -1.892 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.930      ;
+; -1.892 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.930      ;
+; -1.866 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.904      ;
+; -1.866 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.904      ;
+; -1.866 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.904      ;
+; -1.866 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.904      ;
+; -1.866 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.904      ;
+; -1.866 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.904      ;
+; -1.866 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.904      ;
+; -1.866 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.904      ;
+; -1.866 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.904      ;
+; -1.866 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.904      ;
+; -1.858 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.894      ;
+; -1.858 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.894      ;
+; -1.858 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.894      ;
+; -1.858 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.894      ;
+; -1.858 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.894      ;
+; -1.858 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.894      ;
+; -1.858 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.894      ;
+; -1.858 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.894      ;
+; -1.858 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.894      ;
+; -1.858 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.894      ;
+; -1.831 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.869      ;
+; -1.831 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.869      ;
+; -1.831 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.869      ;
+; -1.831 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.869      ;
+; -1.831 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.869      ;
+; -1.831 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.869      ;
+; -1.831 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.869      ;
+; -1.831 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.869      ;
+; -1.831 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.869      ;
+; -1.831 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.869      ;
+; -1.826 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.862      ;
+; -1.826 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.862      ;
+; -1.826 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.862      ;
+; -1.826 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.862      ;
+; -1.826 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.862      ;
+; -1.826 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.862      ;
+; -1.826 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.862      ;
+; -1.826 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.862      ;
+; -1.826 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.862      ;
+; -1.826 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.862      ;
+; -1.804 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.842      ;
+; -1.804 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.842      ;
+; -1.804 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.842      ;
+; -1.804 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.842      ;
+; -1.804 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.842      ;
+; -1.804 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.842      ;
+; -1.804 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.842      ;
+; -1.804 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.842      ;
+; -1.804 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.842      ;
+; -1.804 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.842      ;
+; -1.709 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.747      ;
+; -1.709 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.747      ;
+; -1.709 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.747      ;
+; -1.709 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.747      ;
+; -1.709 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.747      ;
+; -1.709 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.747      ;
+; -1.709 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.747      ;
+; -1.709 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.747      ;
+; -1.709 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.747      ;
+; -1.709 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 2.747      ;
+; -1.684 ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.720      ;
+; -1.684 ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.720      ;
+; -1.684 ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.720      ;
+; -1.684 ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.720      ;
+; -1.684 ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.720      ;
+; -1.684 ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.720      ;
+; -1.684 ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.720      ;
+; -1.684 ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.720      ;
+; -1.684 ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.720      ;
+; -1.684 ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.720      ;
+; -1.678 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 2.714      ;
++--------+--------------------+--------------------+--------------+--------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                              ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; 1.996 ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; CLOCK_50    ; 0.500        ; 1.867      ; 0.657      ;
+; 2.496 ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; CLOCK_50    ; 1.000        ; 1.867      ; 0.657      ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; -1.726 ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; CLOCK_50    ; 0.000        ; 1.867      ; 0.657      ;
+; -1.226 ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; CLOCK_50    ; -0.500       ; 1.867      ; 0.657      ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'VGA_CTRL_CLK'                                                                                                ;
++-------+------------------------+------------------------+--------------+--------------+--------------+------------+------------+
+; Slack ; From Node              ; To Node                ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------+------------------------+--------------+--------------+--------------+------------+------------+
+; 0.391 ; VGA:VGA1|oVGA_V_SYNC_s ; VGA:VGA1|oVGA_V_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.657      ;
+; 0.692 ; VGA:VGA1|H_Cont[6]     ; VGA:VGA1|oVGA_H_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.958      ;
+; 0.724 ; VGA:VGA1|H_Cont[9]     ; VGA:VGA1|H_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.990      ;
+; 0.804 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[0]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.070      ;
+; 0.807 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[0]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.073      ;
+; 0.809 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.075      ;
+; 0.809 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.075      ;
+; 0.816 ; VGA:VGA1|V_Cont[8]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.082      ;
+; 0.820 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.086      ;
+; 0.821 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.087      ;
+; 0.822 ; VGA:VGA1|V_Cont[6]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.088      ;
+; 0.841 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.107      ;
+; 0.848 ; VGA:VGA1|V_Cont[7]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.114      ;
+; 0.848 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.114      ;
+; 0.852 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.118      ;
+; 0.853 ; VGA:VGA1|V_Cont[4]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.119      ;
+; 0.854 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.120      ;
+; 0.985 ; VGA:VGA1|H_Cont[4]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.251      ;
+; 0.997 ; VGA:VGA1|H_Cont[7]     ; VGA:VGA1|H_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.263      ;
+; 0.999 ; VGA:VGA1|H_Cont[6]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.265      ;
+; 1.001 ; VGA:VGA1|H_Cont[5]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.267      ;
+; 1.001 ; VGA:VGA1|H_Cont[5]     ; VGA:VGA1|oVGA_H_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.267      ;
+; 1.025 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.291      ;
+; 1.187 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.453      ;
+; 1.190 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.456      ;
+; 1.192 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.458      ;
+; 1.192 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.458      ;
+; 1.199 ; VGA:VGA1|V_Cont[8]     ; VGA:VGA1|V_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.465      ;
+; 1.203 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.469      ;
+; 1.204 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.470      ;
+; 1.219 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|oVGA_V_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.002      ; 1.487      ;
+; 1.227 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.493      ;
+; 1.234 ; VGA:VGA1|V_Cont[7]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.500      ;
+; 1.238 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.504      ;
+; 1.239 ; VGA:VGA1|V_Cont[4]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.505      ;
+; 1.240 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.506      ;
+; 1.258 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.524      ;
+; 1.261 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.527      ;
+; 1.263 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.529      ;
+; 1.263 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.529      ;
+; 1.274 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.540      ;
+; 1.275 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.541      ;
+; 1.297 ; VGA:VGA1|V_Cont[6]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.563      ;
+; 1.298 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.564      ;
+; 1.305 ; VGA:VGA1|V_Cont[7]     ; VGA:VGA1|V_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.571      ;
+; 1.309 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.575      ;
+; 1.310 ; VGA:VGA1|V_Cont[4]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.576      ;
+; 1.329 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.595      ;
+; 1.332 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.598      ;
+; 1.334 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.600      ;
+; 1.334 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.600      ;
+; 1.345 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.611      ;
+; 1.346 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.612      ;
+; 1.368 ; VGA:VGA1|V_Cont[6]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.634      ;
+; 1.368 ; VGA:VGA1|H_Cont[4]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.634      ;
+; 1.369 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.635      ;
+; 1.380 ; VGA:VGA1|H_Cont[7]     ; VGA:VGA1|H_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.646      ;
+; 1.380 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.646      ;
+; 1.384 ; VGA:VGA1|H_Cont[5]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.650      ;
+; 1.399 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.665      ;
+; 1.400 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.666      ;
+; 1.402 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|oVGA_H_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.668      ;
+; 1.403 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.669      ;
+; 1.405 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.671      ;
+; 1.411 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.677      ;
+; 1.416 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.682      ;
+; 1.433 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|oVGA_V_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.002      ; 1.701      ;
+; 1.439 ; VGA:VGA1|V_Cont[6]     ; VGA:VGA1|V_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.705      ;
+; 1.439 ; VGA:VGA1|H_Cont[4]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.705      ;
+; 1.440 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.706      ;
+; 1.451 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.717      ;
+; 1.451 ; VGA:VGA1|H_Cont[7]     ; VGA:VGA1|H_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.717      ;
+; 1.469 ; VGA:VGA1|V_Cont[4]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.735      ;
+; 1.470 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.736      ;
+; 1.471 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.737      ;
+; 1.474 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.740      ;
+; 1.475 ; VGA:VGA1|H_Cont[6]     ; VGA:VGA1|H_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.741      ;
+; 1.476 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.742      ;
+; 1.487 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.753      ;
+; 1.493 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.759      ;
+; 1.501 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|oVGA_V_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.002      ; 1.769      ;
+; 1.505 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.771      ;
+; 1.513 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[0]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.779      ;
+; 1.513 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.779      ;
+; 1.513 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.779      ;
+; 1.513 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.779      ;
+; 1.513 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.779      ;
+; 1.513 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.779      ;
+; 1.513 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.779      ;
+; 1.513 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.779      ;
+; 1.513 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.779      ;
+; 1.514 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[0]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.780      ;
+; 1.514 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.780      ;
+; 1.514 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.780      ;
+; 1.514 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.780      ;
+; 1.514 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.780      ;
+; 1.514 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.780      ;
+; 1.514 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.780      ;
+; 1.514 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.780      ;
+; 1.528 ; VGA:VGA1|H_Cont[7]     ; VGA:VGA1|oVGA_H_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 1.794      ;
++-------+------------------------+------------------------+--------------+--------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                           ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; VGA_CTRL_CLK     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; VGA_CTRL_CLK     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; VGA_CTRL_CLK|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; VGA_CTRL_CLK|clk ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'VGA_CTRL_CLK'                                                                        ;
++--------+--------------+----------------+------------------+--------------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock        ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+--------------+------------+-------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|oVGA_H_SYNC_s        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|oVGA_H_SYNC_s        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|oVGA_V_SYNC_s        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|oVGA_V_SYNC_s        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|oVGA_H_SYNC_s|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|oVGA_H_SYNC_s|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|oVGA_V_SYNC_s|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|oVGA_V_SYNC_s|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+--------------+------------+-------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+--------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+--------------+-------+-------+------------+-----------------+
+; reset     ; VGA_CTRL_CLK ; 6.816 ; 6.816 ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-----------+--------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+--------------+--------+--------+------------+-----------------+
+; reset     ; VGA_CTRL_CLK ; -5.196 ; -5.196 ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-----------+--------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+--------------+--------+--------+------------+-----------------+
+; VGA_CLK   ; VGA_CTRL_CLK ; 5.182  ;        ; Rise       ; VGA_CTRL_CLK    ;
+; VGA_B[*]  ; VGA_CTRL_CLK ; 9.316  ; 9.316  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[0] ; VGA_CTRL_CLK ; 9.293  ; 9.293  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[1] ; VGA_CTRL_CLK ; 9.303  ; 9.303  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[2] ; VGA_CTRL_CLK ; 9.033  ; 9.033  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[3] ; VGA_CTRL_CLK ; 9.262  ; 9.262  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[4] ; VGA_CTRL_CLK ; 9.104  ; 9.104  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[5] ; VGA_CTRL_CLK ; 9.082  ; 9.082  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[6] ; VGA_CTRL_CLK ; 9.071  ; 9.071  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[7] ; VGA_CTRL_CLK ; 9.074  ; 9.074  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[8] ; VGA_CTRL_CLK ; 9.274  ; 9.274  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[9] ; VGA_CTRL_CLK ; 9.316  ; 9.316  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_CLK   ; VGA_CTRL_CLK ;        ; 5.182  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_G[*]  ; VGA_CTRL_CLK ; 9.571  ; 9.571  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[0] ; VGA_CTRL_CLK ; 9.553  ; 9.553  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[1] ; VGA_CTRL_CLK ; 9.562  ; 9.562  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[2] ; VGA_CTRL_CLK ; 9.533  ; 9.533  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[3] ; VGA_CTRL_CLK ; 9.538  ; 9.538  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[4] ; VGA_CTRL_CLK ; 9.553  ; 9.553  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[5] ; VGA_CTRL_CLK ; 9.541  ; 9.541  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[6] ; VGA_CTRL_CLK ; 9.571  ; 9.571  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[7] ; VGA_CTRL_CLK ; 9.529  ; 9.529  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[8] ; VGA_CTRL_CLK ; 9.320  ; 9.320  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[9] ; VGA_CTRL_CLK ; 9.320  ; 9.320  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_HS    ; VGA_CTRL_CLK ; 6.368  ; 6.368  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_R[*]  ; VGA_CTRL_CLK ; 10.010 ; 10.010 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[0] ; VGA_CTRL_CLK ; 10.010 ; 10.010 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[1] ; VGA_CTRL_CLK ; 9.823  ; 9.823  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[2] ; VGA_CTRL_CLK ; 9.806  ; 9.806  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[3] ; VGA_CTRL_CLK ; 9.768  ; 9.768  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[4] ; VGA_CTRL_CLK ; 9.771  ; 9.771  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[5] ; VGA_CTRL_CLK ; 9.770  ; 9.770  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[6] ; VGA_CTRL_CLK ; 9.848  ; 9.848  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[7] ; VGA_CTRL_CLK ; 9.764  ; 9.764  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[8] ; VGA_CTRL_CLK ; 9.525  ; 9.525  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[9] ; VGA_CTRL_CLK ; 9.526  ; 9.526  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_SYNC  ; VGA_CTRL_CLK ; 7.065  ; 7.065  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_VS    ; VGA_CTRL_CLK ; 6.352  ; 6.352  ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+--------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+--------------+-------+-------+------------+-----------------+
+; VGA_CLK   ; VGA_CTRL_CLK ; 5.182 ;       ; Rise       ; VGA_CTRL_CLK    ;
+; VGA_B[*]  ; VGA_CTRL_CLK ; 7.933 ; 7.933 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[0] ; VGA_CTRL_CLK ; 8.193 ; 8.193 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[1] ; VGA_CTRL_CLK ; 8.203 ; 8.203 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[2] ; VGA_CTRL_CLK ; 7.933 ; 7.933 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[3] ; VGA_CTRL_CLK ; 8.162 ; 8.162 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[4] ; VGA_CTRL_CLK ; 8.004 ; 8.004 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[5] ; VGA_CTRL_CLK ; 7.982 ; 7.982 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[6] ; VGA_CTRL_CLK ; 7.971 ; 7.971 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[7] ; VGA_CTRL_CLK ; 7.974 ; 7.974 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[8] ; VGA_CTRL_CLK ; 8.174 ; 8.174 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[9] ; VGA_CTRL_CLK ; 8.216 ; 8.216 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_CLK   ; VGA_CTRL_CLK ;       ; 5.182 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_G[*]  ; VGA_CTRL_CLK ; 8.220 ; 8.220 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[0] ; VGA_CTRL_CLK ; 8.453 ; 8.453 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[1] ; VGA_CTRL_CLK ; 8.462 ; 8.462 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[2] ; VGA_CTRL_CLK ; 8.433 ; 8.433 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[3] ; VGA_CTRL_CLK ; 8.438 ; 8.438 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[4] ; VGA_CTRL_CLK ; 8.453 ; 8.453 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[5] ; VGA_CTRL_CLK ; 8.441 ; 8.441 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[6] ; VGA_CTRL_CLK ; 8.471 ; 8.471 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[7] ; VGA_CTRL_CLK ; 8.429 ; 8.429 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[8] ; VGA_CTRL_CLK ; 8.220 ; 8.220 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[9] ; VGA_CTRL_CLK ; 8.220 ; 8.220 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_HS    ; VGA_CTRL_CLK ; 6.368 ; 6.368 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_R[*]  ; VGA_CTRL_CLK ; 8.425 ; 8.425 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[0] ; VGA_CTRL_CLK ; 8.910 ; 8.910 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[1] ; VGA_CTRL_CLK ; 8.723 ; 8.723 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[2] ; VGA_CTRL_CLK ; 8.706 ; 8.706 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[3] ; VGA_CTRL_CLK ; 8.668 ; 8.668 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[4] ; VGA_CTRL_CLK ; 8.671 ; 8.671 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[5] ; VGA_CTRL_CLK ; 8.670 ; 8.670 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[6] ; VGA_CTRL_CLK ; 8.748 ; 8.748 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[7] ; VGA_CTRL_CLK ; 8.664 ; 8.664 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[8] ; VGA_CTRL_CLK ; 8.425 ; 8.425 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[9] ; VGA_CTRL_CLK ; 8.426 ; 8.426 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_SYNC  ; VGA_CTRL_CLK ; 6.956 ; 6.956 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_VS    ; VGA_CTRL_CLK ; 6.352 ; 6.352 ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; SW[0]      ; VGA_B[0]    ; 6.747  ;    ;    ; 6.747  ;
+; SW[0]      ; VGA_G[0]    ; 7.007  ;    ;    ; 7.007  ;
+; SW[0]      ; VGA_R[0]    ; 7.464  ;    ;    ; 7.464  ;
+; SW[1]      ; VGA_B[1]    ; 6.699  ;    ;    ; 6.699  ;
+; SW[1]      ; VGA_G[1]    ; 6.958  ;    ;    ; 6.958  ;
+; SW[1]      ; VGA_R[1]    ; 7.219  ;    ;    ; 7.219  ;
+; SW[2]      ; VGA_B[2]    ; 6.403  ;    ;    ; 6.403  ;
+; SW[2]      ; VGA_G[2]    ; 6.903  ;    ;    ; 6.903  ;
+; SW[2]      ; VGA_R[2]    ; 7.176  ;    ;    ; 7.176  ;
+; SW[3]      ; VGA_B[3]    ; 7.217  ;    ;    ; 7.217  ;
+; SW[3]      ; VGA_G[3]    ; 7.493  ;    ;    ; 7.493  ;
+; SW[3]      ; VGA_R[3]    ; 7.723  ;    ;    ; 7.723  ;
+; SW[4]      ; VGA_B[4]    ; 7.101  ;    ;    ; 7.101  ;
+; SW[4]      ; VGA_G[4]    ; 7.550  ;    ;    ; 7.550  ;
+; SW[4]      ; VGA_R[4]    ; 7.768  ;    ;    ; 7.768  ;
+; SW[5]      ; VGA_B[5]    ; 10.682 ;    ;    ; 10.682 ;
+; SW[5]      ; VGA_G[5]    ; 11.141 ;    ;    ; 11.141 ;
+; SW[5]      ; VGA_R[5]    ; 11.370 ;    ;    ; 11.370 ;
+; SW[6]      ; VGA_B[6]    ; 6.639  ;    ;    ; 6.639  ;
+; SW[6]      ; VGA_G[6]    ; 7.139  ;    ;    ; 7.139  ;
+; SW[6]      ; VGA_R[6]    ; 7.416  ;    ;    ; 7.416  ;
+; SW[7]      ; VGA_B[7]    ; 5.377  ;    ;    ; 5.377  ;
+; SW[7]      ; VGA_G[7]    ; 5.832  ;    ;    ; 5.832  ;
+; SW[7]      ; VGA_R[7]    ; 6.067  ;    ;    ; 6.067  ;
+; SW[8]      ; VGA_B[8]    ; 5.596  ;    ;    ; 5.596  ;
+; SW[8]      ; VGA_G[8]    ; 5.642  ;    ;    ; 5.642  ;
+; SW[8]      ; VGA_R[8]    ; 5.847  ;    ;    ; 5.847  ;
+; SW[9]      ; VGA_B[9]    ; 5.680  ;    ;    ; 5.680  ;
+; SW[9]      ; VGA_G[9]    ; 5.684  ;    ;    ; 5.684  ;
+; SW[9]      ; VGA_R[9]    ; 5.890  ;    ;    ; 5.890  ;
++------------+-------------+--------+----+----+--------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; SW[0]      ; VGA_B[0]    ; 6.747  ;    ;    ; 6.747  ;
+; SW[0]      ; VGA_G[0]    ; 7.007  ;    ;    ; 7.007  ;
+; SW[0]      ; VGA_R[0]    ; 7.464  ;    ;    ; 7.464  ;
+; SW[1]      ; VGA_B[1]    ; 6.699  ;    ;    ; 6.699  ;
+; SW[1]      ; VGA_G[1]    ; 6.958  ;    ;    ; 6.958  ;
+; SW[1]      ; VGA_R[1]    ; 7.219  ;    ;    ; 7.219  ;
+; SW[2]      ; VGA_B[2]    ; 6.403  ;    ;    ; 6.403  ;
+; SW[2]      ; VGA_G[2]    ; 6.903  ;    ;    ; 6.903  ;
+; SW[2]      ; VGA_R[2]    ; 7.176  ;    ;    ; 7.176  ;
+; SW[3]      ; VGA_B[3]    ; 7.217  ;    ;    ; 7.217  ;
+; SW[3]      ; VGA_G[3]    ; 7.493  ;    ;    ; 7.493  ;
+; SW[3]      ; VGA_R[3]    ; 7.723  ;    ;    ; 7.723  ;
+; SW[4]      ; VGA_B[4]    ; 7.101  ;    ;    ; 7.101  ;
+; SW[4]      ; VGA_G[4]    ; 7.550  ;    ;    ; 7.550  ;
+; SW[4]      ; VGA_R[4]    ; 7.768  ;    ;    ; 7.768  ;
+; SW[5]      ; VGA_B[5]    ; 10.682 ;    ;    ; 10.682 ;
+; SW[5]      ; VGA_G[5]    ; 11.141 ;    ;    ; 11.141 ;
+; SW[5]      ; VGA_R[5]    ; 11.370 ;    ;    ; 11.370 ;
+; SW[6]      ; VGA_B[6]    ; 6.639  ;    ;    ; 6.639  ;
+; SW[6]      ; VGA_G[6]    ; 7.139  ;    ;    ; 7.139  ;
+; SW[6]      ; VGA_R[6]    ; 7.416  ;    ;    ; 7.416  ;
+; SW[7]      ; VGA_B[7]    ; 5.377  ;    ;    ; 5.377  ;
+; SW[7]      ; VGA_G[7]    ; 5.832  ;    ;    ; 5.832  ;
+; SW[7]      ; VGA_R[7]    ; 6.067  ;    ;    ; 6.067  ;
+; SW[8]      ; VGA_B[8]    ; 5.596  ;    ;    ; 5.596  ;
+; SW[8]      ; VGA_G[8]    ; 5.642  ;    ;    ; 5.642  ;
+; SW[8]      ; VGA_R[8]    ; 5.847  ;    ;    ; 5.847  ;
+; SW[9]      ; VGA_B[9]    ; 5.680  ;    ;    ; 5.680  ;
+; SW[9]      ; VGA_G[9]    ; 5.684  ;    ;    ; 5.684  ;
+; SW[9]      ; VGA_R[9]    ; 5.890  ;    ;    ; 5.890  ;
++------------+-------------+--------+----+----+--------+
+
+
++---------------------------------------+
+; Fast Model Setup Summary              ;
++--------------+--------+---------------+
+; Clock        ; Slack  ; End Point TNS ;
++--------------+--------+---------------+
+; VGA_CTRL_CLK ; -0.400 ; -4.983        ;
+; CLOCK_50     ; 1.353  ; 0.000         ;
++--------------+--------+---------------+
+
+
++---------------------------------------+
+; Fast Model Hold Summary               ;
++--------------+--------+---------------+
+; Clock        ; Slack  ; End Point TNS ;
++--------------+--------+---------------+
+; CLOCK_50     ; -0.973 ; -0.973        ;
+; VGA_CTRL_CLK ; 0.215  ; 0.000         ;
++--------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------------+--------+----------------+
+; Clock        ; Slack  ; End Point TNS  ;
++--------------+--------+----------------+
+; CLOCK_50     ; -1.380 ; -2.380         ;
+; VGA_CTRL_CLK ; -0.500 ; -22.000        ;
++--------------+--------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'VGA_CTRL_CLK'                                                                                        ;
++--------+--------------------+--------------------+--------------+--------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------+--------------+--------------+------------+------------+
+; -0.400 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.434      ;
+; -0.400 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.434      ;
+; -0.400 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.434      ;
+; -0.400 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.434      ;
+; -0.400 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.434      ;
+; -0.400 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.434      ;
+; -0.400 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.434      ;
+; -0.400 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.434      ;
+; -0.400 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.434      ;
+; -0.400 ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.434      ;
+; -0.391 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.425      ;
+; -0.391 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.425      ;
+; -0.391 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.425      ;
+; -0.391 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.425      ;
+; -0.391 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.425      ;
+; -0.391 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.425      ;
+; -0.391 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.425      ;
+; -0.391 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.425      ;
+; -0.391 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.425      ;
+; -0.391 ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.425      ;
+; -0.365 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.399      ;
+; -0.365 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.399      ;
+; -0.365 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.399      ;
+; -0.365 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.399      ;
+; -0.365 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.399      ;
+; -0.365 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.399      ;
+; -0.365 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.399      ;
+; -0.365 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.399      ;
+; -0.365 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.399      ;
+; -0.365 ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.399      ;
+; -0.358 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.392      ;
+; -0.358 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.392      ;
+; -0.358 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.392      ;
+; -0.358 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.392      ;
+; -0.358 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.392      ;
+; -0.358 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.392      ;
+; -0.358 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.392      ;
+; -0.358 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.392      ;
+; -0.358 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.392      ;
+; -0.358 ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.392      ;
+; -0.355 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.389      ;
+; -0.355 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.389      ;
+; -0.355 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.389      ;
+; -0.355 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.389      ;
+; -0.355 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.389      ;
+; -0.355 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.389      ;
+; -0.355 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.389      ;
+; -0.355 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.389      ;
+; -0.355 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.389      ;
+; -0.355 ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.389      ;
+; -0.344 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.376      ;
+; -0.344 ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.376      ;
+; -0.332 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.364      ;
+; -0.332 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.364      ;
+; -0.332 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.364      ;
+; -0.332 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.364      ;
+; -0.332 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.364      ;
+; -0.332 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.364      ;
+; -0.332 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.364      ;
+; -0.332 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.364      ;
+; -0.332 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.364      ;
+; -0.332 ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.364      ;
+; -0.318 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.352      ;
+; -0.318 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.352      ;
+; -0.318 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.352      ;
+; -0.318 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.352      ;
+; -0.318 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.352      ;
+; -0.318 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.352      ;
+; -0.318 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.352      ;
+; -0.318 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.352      ;
+; -0.318 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.352      ;
+; -0.318 ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.352      ;
+; -0.288 ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.322      ;
+; -0.288 ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.322      ;
+; -0.288 ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.322      ;
+; -0.288 ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.322      ;
+; -0.288 ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.322      ;
+; -0.288 ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.322      ;
+; -0.288 ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.322      ;
+; -0.288 ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.322      ;
+; -0.288 ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.322      ;
+; -0.288 ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.002      ; 1.322      ;
+; -0.268 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[0] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[1] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[2] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[3] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[5] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[6] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[7] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[8] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[9] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.300      ;
+; -0.268 ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[4] ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 1.000        ; 0.000      ; 1.300      ;
++--------+--------------------+--------------------+--------------+--------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                              ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; 1.353 ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; CLOCK_50    ; 0.500        ; 1.047      ; 0.367      ;
+; 1.853 ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; CLOCK_50    ; 1.000        ; 1.047      ; 0.367      ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; -0.973 ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; CLOCK_50    ; 0.000        ; 1.047      ; 0.367      ;
+; -0.473 ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; CLOCK_50    ; -0.500       ; 1.047      ; 0.367      ;
++--------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'VGA_CTRL_CLK'                                                                                                ;
++-------+------------------------+------------------------+--------------+--------------+--------------+------------+------------+
+; Slack ; From Node              ; To Node                ; Launch Clock ; Latch Clock  ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------+------------------------+--------------+--------------+--------------+------------+------------+
+; 0.215 ; VGA:VGA1|oVGA_V_SYNC_s ; VGA:VGA1|oVGA_V_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.367      ;
+; 0.325 ; VGA:VGA1|H_Cont[6]     ; VGA:VGA1|oVGA_H_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.477      ;
+; 0.329 ; VGA:VGA1|H_Cont[9]     ; VGA:VGA1|H_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.481      ;
+; 0.361 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[0]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[0]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.515      ;
+; 0.366 ; VGA:VGA1|V_Cont[8]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.518      ;
+; 0.369 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370 ; VGA:VGA1|V_Cont[6]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.522      ;
+; 0.373 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.525      ;
+; 0.377 ; VGA:VGA1|V_Cont[7]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|V_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.530      ;
+; 0.379 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.531      ;
+; 0.380 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380 ; VGA:VGA1|V_Cont[4]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.532      ;
+; 0.442 ; VGA:VGA1|H_Cont[4]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.594      ;
+; 0.446 ; VGA:VGA1|H_Cont[7]     ; VGA:VGA1|H_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.598      ;
+; 0.451 ; VGA:VGA1|H_Cont[5]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.603      ;
+; 0.452 ; VGA:VGA1|H_Cont[6]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.604      ;
+; 0.454 ; VGA:VGA1|H_Cont[5]     ; VGA:VGA1|oVGA_H_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.606      ;
+; 0.456 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.608      ;
+; 0.499 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.652      ;
+; 0.501 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.653      ;
+; 0.504 ; VGA:VGA1|V_Cont[8]     ; VGA:VGA1|V_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.656      ;
+; 0.507 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.659      ;
+; 0.513 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.665      ;
+; 0.517 ; VGA:VGA1|V_Cont[7]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.669      ;
+; 0.519 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.671      ;
+; 0.520 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.672      ;
+; 0.520 ; VGA:VGA1|V_Cont[4]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.672      ;
+; 0.534 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.686      ;
+; 0.535 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.687      ;
+; 0.536 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.688      ;
+; 0.536 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[2]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.688      ;
+; 0.542 ; VGA:VGA1|V_Cont[9]     ; VGA:VGA1|oVGA_V_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.001      ; 0.695      ;
+; 0.542 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.694      ;
+; 0.542 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.694      ;
+; 0.548 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.700      ;
+; 0.552 ; VGA:VGA1|V_Cont[7]     ; VGA:VGA1|V_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.704      ;
+; 0.554 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.706      ;
+; 0.555 ; VGA:VGA1|V_Cont[4]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.707      ;
+; 0.563 ; VGA:VGA1|V_Cont[6]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.715      ;
+; 0.569 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.721      ;
+; 0.570 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.722      ;
+; 0.571 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.723      ;
+; 0.571 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[3]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.723      ;
+; 0.577 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.729      ;
+; 0.577 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.729      ;
+; 0.580 ; VGA:VGA1|H_Cont[4]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.732      ;
+; 0.583 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.735      ;
+; 0.584 ; VGA:VGA1|H_Cont[7]     ; VGA:VGA1|H_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.736      ;
+; 0.589 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.741      ;
+; 0.589 ; VGA:VGA1|H_Cont[5]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.741      ;
+; 0.596 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.748      ;
+; 0.598 ; VGA:VGA1|V_Cont[6]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.750      ;
+; 0.604 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.756      ;
+; 0.605 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.757      ;
+; 0.606 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[4]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.758      ;
+; 0.612 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.764      ;
+; 0.614 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.766      ;
+; 0.615 ; VGA:VGA1|H_Cont[4]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.767      ;
+; 0.618 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.770      ;
+; 0.619 ; VGA:VGA1|H_Cont[7]     ; VGA:VGA1|H_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.771      ;
+; 0.620 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|oVGA_H_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.772      ;
+; 0.624 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.776      ;
+; 0.628 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|oVGA_V_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.001      ; 0.781      ;
+; 0.633 ; VGA:VGA1|V_Cont[6]     ; VGA:VGA1|V_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.785      ;
+; 0.639 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.791      ;
+; 0.640 ; VGA:VGA1|H_Cont[1]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.792      ;
+; 0.641 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[5]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.793      ;
+; 0.646 ; VGA:VGA1|H_Cont[6]     ; VGA:VGA1|H_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.798      ;
+; 0.647 ; VGA:VGA1|V_Cont[1]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.799      ;
+; 0.649 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.801      ;
+; 0.649 ; VGA:VGA1|V_Cont[4]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.801      ;
+; 0.665 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.817      ;
+; 0.670 ; VGA:VGA1|H_Cont[7]     ; VGA:VGA1|oVGA_H_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.822      ;
+; 0.671 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.823      ;
+; 0.673 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|oVGA_V_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.001      ; 0.826      ;
+; 0.674 ; VGA:VGA1|H_Cont[0]     ; VGA:VGA1|H_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.826      ;
+; 0.676 ; VGA:VGA1|V_Cont[0]     ; VGA:VGA1|V_Cont[6]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.828      ;
+; 0.681 ; VGA:VGA1|H_Cont[6]     ; VGA:VGA1|H_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.833      ;
+; 0.683 ; VGA:VGA1|H_Cont[5]     ; VGA:VGA1|H_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.835      ;
+; 0.684 ; VGA:VGA1|V_Cont[5]     ; VGA:VGA1|V_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.836      ;
+; 0.684 ; VGA:VGA1|V_Cont[4]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.836      ;
+; 0.700 ; VGA:VGA1|H_Cont[3]     ; VGA:VGA1|H_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.852      ;
+; 0.706 ; VGA:VGA1|V_Cont[3]     ; VGA:VGA1|V_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.858      ;
+; 0.709 ; VGA:VGA1|H_Cont[4]     ; VGA:VGA1|H_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.861      ;
+; 0.712 ; VGA:VGA1|H_Cont[2]     ; VGA:VGA1|H_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.864      ;
+; 0.716 ; VGA:VGA1|H_Cont[6]     ; VGA:VGA1|H_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.868      ;
+; 0.718 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|V_Cont[7]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.870      ;
+; 0.718 ; VGA:VGA1|H_Cont[5]     ; VGA:VGA1|H_Cont[8]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.870      ;
+; 0.719 ; VGA:VGA1|V_Cont[4]     ; VGA:VGA1|V_Cont[9]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.871      ;
+; 0.725 ; VGA:VGA1|V_Cont[2]     ; VGA:VGA1|oVGA_V_SYNC_s ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.001      ; 0.878      ;
+; 0.733 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[0]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.885      ;
+; 0.733 ; VGA:VGA1|H_Cont[8]     ; VGA:VGA1|H_Cont[1]     ; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0.000        ; 0.000      ; 0.885      ;
++-------+------------------------+------------------------+--------------+--------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                           ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; VGA_CTRL_CLK     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; VGA_CTRL_CLK     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; VGA_CTRL_CLK|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; VGA_CTRL_CLK|clk ;
++--------+--------------+----------------+------------------+----------+------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'VGA_CTRL_CLK'                                                                        ;
++--------+--------------+----------------+------------------+--------------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock        ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+--------------+------------+-------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|H_Cont[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|V_Cont[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|oVGA_H_SYNC_s        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|oVGA_H_SYNC_s        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|oVGA_V_SYNC_s        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Fall       ; VGA:VGA1|oVGA_V_SYNC_s        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|H_Cont[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|V_Cont[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|oVGA_H_SYNC_s|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|oVGA_H_SYNC_s|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA1|oVGA_V_SYNC_s|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA1|oVGA_V_SYNC_s|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_CTRL_CLK ; Rise       ; VGA_CTRL_CLK~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+--------------+------------+-------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+--------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+--------------+-------+-------+------------+-----------------+
+; reset     ; VGA_CTRL_CLK ; 3.608 ; 3.608 ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-----------+--------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+--------------+--------+--------+------------+-----------------+
+; reset     ; VGA_CTRL_CLK ; -2.809 ; -2.809 ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+--------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+--------------+-------+-------+------------+-----------------+
+; VGA_CLK   ; VGA_CTRL_CLK ; 2.742 ;       ; Rise       ; VGA_CTRL_CLK    ;
+; VGA_B[*]  ; VGA_CTRL_CLK ; 4.907 ; 4.907 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[0] ; VGA_CTRL_CLK ; 4.890 ; 4.890 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[1] ; VGA_CTRL_CLK ; 4.896 ; 4.896 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[2] ; VGA_CTRL_CLK ; 4.760 ; 4.760 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[3] ; VGA_CTRL_CLK ; 4.861 ; 4.861 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[4] ; VGA_CTRL_CLK ; 4.827 ; 4.827 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[5] ; VGA_CTRL_CLK ; 4.808 ; 4.808 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[6] ; VGA_CTRL_CLK ; 4.796 ; 4.796 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[7] ; VGA_CTRL_CLK ; 4.798 ; 4.798 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[8] ; VGA_CTRL_CLK ; 4.879 ; 4.879 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[9] ; VGA_CTRL_CLK ; 4.907 ; 4.907 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_CLK   ; VGA_CTRL_CLK ;       ; 2.742 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_G[*]  ; VGA_CTRL_CLK ; 5.024 ; 5.024 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[0] ; VGA_CTRL_CLK ; 5.020 ; 5.020 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[1] ; VGA_CTRL_CLK ; 5.024 ; 5.024 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[2] ; VGA_CTRL_CLK ; 5.001 ; 5.001 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[3] ; VGA_CTRL_CLK ; 5.007 ; 5.007 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[4] ; VGA_CTRL_CLK ; 5.018 ; 5.018 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[5] ; VGA_CTRL_CLK ; 5.011 ; 5.011 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[6] ; VGA_CTRL_CLK ; 5.018 ; 5.018 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[7] ; VGA_CTRL_CLK ; 4.996 ; 4.996 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[8] ; VGA_CTRL_CLK ; 4.912 ; 4.912 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[9] ; VGA_CTRL_CLK ; 4.912 ; 4.912 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_HS    ; VGA_CTRL_CLK ; 3.590 ; 3.590 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_R[*]  ; VGA_CTRL_CLK ; 5.223 ; 5.223 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[0] ; VGA_CTRL_CLK ; 5.223 ; 5.223 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[1] ; VGA_CTRL_CLK ; 5.140 ; 5.140 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[2] ; VGA_CTRL_CLK ; 5.129 ; 5.129 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[3] ; VGA_CTRL_CLK ; 5.110 ; 5.110 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[4] ; VGA_CTRL_CLK ; 5.110 ; 5.110 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[5] ; VGA_CTRL_CLK ; 5.112 ; 5.112 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[6] ; VGA_CTRL_CLK ; 5.158 ; 5.158 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[7] ; VGA_CTRL_CLK ; 5.106 ; 5.106 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[8] ; VGA_CTRL_CLK ; 4.992 ; 4.992 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[9] ; VGA_CTRL_CLK ; 4.994 ; 4.994 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_SYNC  ; VGA_CTRL_CLK ; 3.903 ; 3.903 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_VS    ; VGA_CTRL_CLK ; 3.573 ; 3.573 ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+--------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+--------------+-------+-------+------------+-----------------+
+; VGA_CLK   ; VGA_CTRL_CLK ; 2.742 ;       ; Rise       ; VGA_CTRL_CLK    ;
+; VGA_B[*]  ; VGA_CTRL_CLK ; 4.268 ; 4.268 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[0] ; VGA_CTRL_CLK ; 4.398 ; 4.398 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[1] ; VGA_CTRL_CLK ; 4.404 ; 4.404 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[2] ; VGA_CTRL_CLK ; 4.268 ; 4.268 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[3] ; VGA_CTRL_CLK ; 4.369 ; 4.369 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[4] ; VGA_CTRL_CLK ; 4.324 ; 4.324 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[5] ; VGA_CTRL_CLK ; 4.316 ; 4.316 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[6] ; VGA_CTRL_CLK ; 4.301 ; 4.301 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[7] ; VGA_CTRL_CLK ; 4.296 ; 4.296 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[8] ; VGA_CTRL_CLK ; 4.387 ; 4.387 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[9] ; VGA_CTRL_CLK ; 4.411 ; 4.411 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_CLK   ; VGA_CTRL_CLK ;       ; 2.742 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_G[*]  ; VGA_CTRL_CLK ; 4.416 ; 4.416 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[0] ; VGA_CTRL_CLK ; 4.528 ; 4.528 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[1] ; VGA_CTRL_CLK ; 4.532 ; 4.532 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[2] ; VGA_CTRL_CLK ; 4.509 ; 4.509 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[3] ; VGA_CTRL_CLK ; 4.515 ; 4.515 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[4] ; VGA_CTRL_CLK ; 4.515 ; 4.515 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[5] ; VGA_CTRL_CLK ; 4.519 ; 4.519 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[6] ; VGA_CTRL_CLK ; 4.523 ; 4.523 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[7] ; VGA_CTRL_CLK ; 4.494 ; 4.494 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[8] ; VGA_CTRL_CLK ; 4.420 ; 4.420 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[9] ; VGA_CTRL_CLK ; 4.416 ; 4.416 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_HS    ; VGA_CTRL_CLK ; 3.590 ; 3.590 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_R[*]  ; VGA_CTRL_CLK ; 4.498 ; 4.498 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[0] ; VGA_CTRL_CLK ; 4.731 ; 4.731 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[1] ; VGA_CTRL_CLK ; 4.648 ; 4.648 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[2] ; VGA_CTRL_CLK ; 4.637 ; 4.637 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[3] ; VGA_CTRL_CLK ; 4.618 ; 4.618 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[4] ; VGA_CTRL_CLK ; 4.607 ; 4.607 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[5] ; VGA_CTRL_CLK ; 4.620 ; 4.620 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[6] ; VGA_CTRL_CLK ; 4.663 ; 4.663 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[7] ; VGA_CTRL_CLK ; 4.604 ; 4.604 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[8] ; VGA_CTRL_CLK ; 4.500 ; 4.500 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[9] ; VGA_CTRL_CLK ; 4.498 ; 4.498 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_SYNC  ; VGA_CTRL_CLK ; 3.839 ; 3.839 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_VS    ; VGA_CTRL_CLK ; 3.573 ; 3.573 ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; VGA_B[0]    ; 3.564 ;    ;    ; 3.564 ;
+; SW[0]      ; VGA_G[0]    ; 3.694 ;    ;    ; 3.694 ;
+; SW[0]      ; VGA_R[0]    ; 3.897 ;    ;    ; 3.897 ;
+; SW[1]      ; VGA_B[1]    ; 3.525 ;    ;    ; 3.525 ;
+; SW[1]      ; VGA_G[1]    ; 3.653 ;    ;    ; 3.653 ;
+; SW[1]      ; VGA_R[1]    ; 3.769 ;    ;    ; 3.769 ;
+; SW[2]      ; VGA_B[2]    ; 3.377 ;    ;    ; 3.377 ;
+; SW[2]      ; VGA_G[2]    ; 3.618 ;    ;    ; 3.618 ;
+; SW[2]      ; VGA_R[2]    ; 3.746 ;    ;    ; 3.746 ;
+; SW[3]      ; VGA_B[3]    ; 3.864 ;    ;    ; 3.864 ;
+; SW[3]      ; VGA_G[3]    ; 4.010 ;    ;    ; 4.010 ;
+; SW[3]      ; VGA_R[3]    ; 4.113 ;    ;    ; 4.113 ;
+; SW[4]      ; VGA_B[4]    ; 3.856 ;    ;    ; 3.856 ;
+; SW[4]      ; VGA_G[4]    ; 4.047 ;    ;    ; 4.047 ;
+; SW[4]      ; VGA_R[4]    ; 4.139 ;    ;    ; 4.139 ;
+; SW[5]      ; VGA_B[5]    ; 6.011 ;    ;    ; 6.011 ;
+; SW[5]      ; VGA_G[5]    ; 6.214 ;    ;    ; 6.214 ;
+; SW[5]      ; VGA_R[5]    ; 6.315 ;    ;    ; 6.315 ;
+; SW[6]      ; VGA_B[6]    ; 3.508 ;    ;    ; 3.508 ;
+; SW[6]      ; VGA_G[6]    ; 3.730 ;    ;    ; 3.730 ;
+; SW[6]      ; VGA_R[6]    ; 3.870 ;    ;    ; 3.870 ;
+; SW[7]      ; VGA_B[7]    ; 2.810 ;    ;    ; 2.810 ;
+; SW[7]      ; VGA_G[7]    ; 3.008 ;    ;    ; 3.008 ;
+; SW[7]      ; VGA_R[7]    ; 3.118 ;    ;    ; 3.118 ;
+; SW[8]      ; VGA_B[8]    ; 2.909 ;    ;    ; 2.909 ;
+; SW[8]      ; VGA_G[8]    ; 2.942 ;    ;    ; 2.942 ;
+; SW[8]      ; VGA_R[8]    ; 3.022 ;    ;    ; 3.022 ;
+; SW[9]      ; VGA_B[9]    ; 2.960 ;    ;    ; 2.960 ;
+; SW[9]      ; VGA_G[9]    ; 2.965 ;    ;    ; 2.965 ;
+; SW[9]      ; VGA_R[9]    ; 3.047 ;    ;    ; 3.047 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; VGA_B[0]    ; 3.564 ;    ;    ; 3.564 ;
+; SW[0]      ; VGA_G[0]    ; 3.694 ;    ;    ; 3.694 ;
+; SW[0]      ; VGA_R[0]    ; 3.897 ;    ;    ; 3.897 ;
+; SW[1]      ; VGA_B[1]    ; 3.525 ;    ;    ; 3.525 ;
+; SW[1]      ; VGA_G[1]    ; 3.653 ;    ;    ; 3.653 ;
+; SW[1]      ; VGA_R[1]    ; 3.769 ;    ;    ; 3.769 ;
+; SW[2]      ; VGA_B[2]    ; 3.377 ;    ;    ; 3.377 ;
+; SW[2]      ; VGA_G[2]    ; 3.618 ;    ;    ; 3.618 ;
+; SW[2]      ; VGA_R[2]    ; 3.746 ;    ;    ; 3.746 ;
+; SW[3]      ; VGA_B[3]    ; 3.864 ;    ;    ; 3.864 ;
+; SW[3]      ; VGA_G[3]    ; 4.010 ;    ;    ; 4.010 ;
+; SW[3]      ; VGA_R[3]    ; 4.113 ;    ;    ; 4.113 ;
+; SW[4]      ; VGA_B[4]    ; 3.856 ;    ;    ; 3.856 ;
+; SW[4]      ; VGA_G[4]    ; 4.047 ;    ;    ; 4.047 ;
+; SW[4]      ; VGA_R[4]    ; 4.139 ;    ;    ; 4.139 ;
+; SW[5]      ; VGA_B[5]    ; 6.011 ;    ;    ; 6.011 ;
+; SW[5]      ; VGA_G[5]    ; 6.214 ;    ;    ; 6.214 ;
+; SW[5]      ; VGA_R[5]    ; 6.315 ;    ;    ; 6.315 ;
+; SW[6]      ; VGA_B[6]    ; 3.508 ;    ;    ; 3.508 ;
+; SW[6]      ; VGA_G[6]    ; 3.730 ;    ;    ; 3.730 ;
+; SW[6]      ; VGA_R[6]    ; 3.870 ;    ;    ; 3.870 ;
+; SW[7]      ; VGA_B[7]    ; 2.810 ;    ;    ; 2.810 ;
+; SW[7]      ; VGA_G[7]    ; 3.008 ;    ;    ; 3.008 ;
+; SW[7]      ; VGA_R[7]    ; 3.118 ;    ;    ; 3.118 ;
+; SW[8]      ; VGA_B[8]    ; 2.909 ;    ;    ; 2.909 ;
+; SW[8]      ; VGA_G[8]    ; 2.942 ;    ;    ; 2.942 ;
+; SW[8]      ; VGA_R[8]    ; 3.022 ;    ;    ; 3.022 ;
+; SW[9]      ; VGA_B[9]    ; 2.960 ;    ;    ; 2.960 ;
+; SW[9]      ; VGA_G[9]    ; 2.965 ;    ;    ; 2.965 ;
+; SW[9]      ; VGA_R[9]    ; 3.047 ;    ;    ; 3.047 ;
++------------+-------------+-------+----+----+-------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+---------+--------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -1.924  ; -1.726 ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK_50        ; 1.353   ; -1.726 ; N/A      ; N/A     ; -1.380              ;
+;  VGA_CTRL_CLK    ; -1.924  ; 0.215  ; N/A      ; N/A     ; -0.500              ;
+; Design-wide TNS  ; -34.017 ; -1.726 ; 0.0      ; 0.0     ; -24.38              ;
+;  CLOCK_50        ; 0.000   ; -1.726 ; N/A      ; N/A     ; -2.380              ;
+;  VGA_CTRL_CLK    ; -34.017 ; 0.000  ; N/A      ; N/A     ; -22.000             ;
++------------------+---------+--------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+--------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+--------------+-------+-------+------------+-----------------+
+; reset     ; VGA_CTRL_CLK ; 6.816 ; 6.816 ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-----------+--------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+--------------+--------+--------+------------+-----------------+
+; reset     ; VGA_CTRL_CLK ; -2.809 ; -2.809 ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-----------+--------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+--------------+--------+--------+------------+-----------------+
+; VGA_CLK   ; VGA_CTRL_CLK ; 5.182  ;        ; Rise       ; VGA_CTRL_CLK    ;
+; VGA_B[*]  ; VGA_CTRL_CLK ; 9.316  ; 9.316  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[0] ; VGA_CTRL_CLK ; 9.293  ; 9.293  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[1] ; VGA_CTRL_CLK ; 9.303  ; 9.303  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[2] ; VGA_CTRL_CLK ; 9.033  ; 9.033  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[3] ; VGA_CTRL_CLK ; 9.262  ; 9.262  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[4] ; VGA_CTRL_CLK ; 9.104  ; 9.104  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[5] ; VGA_CTRL_CLK ; 9.082  ; 9.082  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[6] ; VGA_CTRL_CLK ; 9.071  ; 9.071  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[7] ; VGA_CTRL_CLK ; 9.074  ; 9.074  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[8] ; VGA_CTRL_CLK ; 9.274  ; 9.274  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[9] ; VGA_CTRL_CLK ; 9.316  ; 9.316  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_CLK   ; VGA_CTRL_CLK ;        ; 5.182  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_G[*]  ; VGA_CTRL_CLK ; 9.571  ; 9.571  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[0] ; VGA_CTRL_CLK ; 9.553  ; 9.553  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[1] ; VGA_CTRL_CLK ; 9.562  ; 9.562  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[2] ; VGA_CTRL_CLK ; 9.533  ; 9.533  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[3] ; VGA_CTRL_CLK ; 9.538  ; 9.538  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[4] ; VGA_CTRL_CLK ; 9.553  ; 9.553  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[5] ; VGA_CTRL_CLK ; 9.541  ; 9.541  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[6] ; VGA_CTRL_CLK ; 9.571  ; 9.571  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[7] ; VGA_CTRL_CLK ; 9.529  ; 9.529  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[8] ; VGA_CTRL_CLK ; 9.320  ; 9.320  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[9] ; VGA_CTRL_CLK ; 9.320  ; 9.320  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_HS    ; VGA_CTRL_CLK ; 6.368  ; 6.368  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_R[*]  ; VGA_CTRL_CLK ; 10.010 ; 10.010 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[0] ; VGA_CTRL_CLK ; 10.010 ; 10.010 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[1] ; VGA_CTRL_CLK ; 9.823  ; 9.823  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[2] ; VGA_CTRL_CLK ; 9.806  ; 9.806  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[3] ; VGA_CTRL_CLK ; 9.768  ; 9.768  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[4] ; VGA_CTRL_CLK ; 9.771  ; 9.771  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[5] ; VGA_CTRL_CLK ; 9.770  ; 9.770  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[6] ; VGA_CTRL_CLK ; 9.848  ; 9.848  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[7] ; VGA_CTRL_CLK ; 9.764  ; 9.764  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[8] ; VGA_CTRL_CLK ; 9.525  ; 9.525  ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[9] ; VGA_CTRL_CLK ; 9.526  ; 9.526  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_SYNC  ; VGA_CTRL_CLK ; 7.065  ; 7.065  ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_VS    ; VGA_CTRL_CLK ; 6.352  ; 6.352  ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+--------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+--------------+-------+-------+------------+-----------------+
+; VGA_CLK   ; VGA_CTRL_CLK ; 2.742 ;       ; Rise       ; VGA_CTRL_CLK    ;
+; VGA_B[*]  ; VGA_CTRL_CLK ; 4.268 ; 4.268 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[0] ; VGA_CTRL_CLK ; 4.398 ; 4.398 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[1] ; VGA_CTRL_CLK ; 4.404 ; 4.404 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[2] ; VGA_CTRL_CLK ; 4.268 ; 4.268 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[3] ; VGA_CTRL_CLK ; 4.369 ; 4.369 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[4] ; VGA_CTRL_CLK ; 4.324 ; 4.324 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[5] ; VGA_CTRL_CLK ; 4.316 ; 4.316 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[6] ; VGA_CTRL_CLK ; 4.301 ; 4.301 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[7] ; VGA_CTRL_CLK ; 4.296 ; 4.296 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[8] ; VGA_CTRL_CLK ; 4.387 ; 4.387 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_B[9] ; VGA_CTRL_CLK ; 4.411 ; 4.411 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_CLK   ; VGA_CTRL_CLK ;       ; 2.742 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_G[*]  ; VGA_CTRL_CLK ; 4.416 ; 4.416 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[0] ; VGA_CTRL_CLK ; 4.528 ; 4.528 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[1] ; VGA_CTRL_CLK ; 4.532 ; 4.532 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[2] ; VGA_CTRL_CLK ; 4.509 ; 4.509 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[3] ; VGA_CTRL_CLK ; 4.515 ; 4.515 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[4] ; VGA_CTRL_CLK ; 4.515 ; 4.515 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[5] ; VGA_CTRL_CLK ; 4.519 ; 4.519 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[6] ; VGA_CTRL_CLK ; 4.523 ; 4.523 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[7] ; VGA_CTRL_CLK ; 4.494 ; 4.494 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[8] ; VGA_CTRL_CLK ; 4.420 ; 4.420 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_G[9] ; VGA_CTRL_CLK ; 4.416 ; 4.416 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_HS    ; VGA_CTRL_CLK ; 3.590 ; 3.590 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_R[*]  ; VGA_CTRL_CLK ; 4.498 ; 4.498 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[0] ; VGA_CTRL_CLK ; 4.731 ; 4.731 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[1] ; VGA_CTRL_CLK ; 4.648 ; 4.648 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[2] ; VGA_CTRL_CLK ; 4.637 ; 4.637 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[3] ; VGA_CTRL_CLK ; 4.618 ; 4.618 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[4] ; VGA_CTRL_CLK ; 4.607 ; 4.607 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[5] ; VGA_CTRL_CLK ; 4.620 ; 4.620 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[6] ; VGA_CTRL_CLK ; 4.663 ; 4.663 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[7] ; VGA_CTRL_CLK ; 4.604 ; 4.604 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[8] ; VGA_CTRL_CLK ; 4.500 ; 4.500 ; Fall       ; VGA_CTRL_CLK    ;
+;  VGA_R[9] ; VGA_CTRL_CLK ; 4.498 ; 4.498 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_SYNC  ; VGA_CTRL_CLK ; 3.839 ; 3.839 ; Fall       ; VGA_CTRL_CLK    ;
+; VGA_VS    ; VGA_CTRL_CLK ; 3.573 ; 3.573 ; Fall       ; VGA_CTRL_CLK    ;
++-----------+--------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Progagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; SW[0]      ; VGA_B[0]    ; 6.747  ;    ;    ; 6.747  ;
+; SW[0]      ; VGA_G[0]    ; 7.007  ;    ;    ; 7.007  ;
+; SW[0]      ; VGA_R[0]    ; 7.464  ;    ;    ; 7.464  ;
+; SW[1]      ; VGA_B[1]    ; 6.699  ;    ;    ; 6.699  ;
+; SW[1]      ; VGA_G[1]    ; 6.958  ;    ;    ; 6.958  ;
+; SW[1]      ; VGA_R[1]    ; 7.219  ;    ;    ; 7.219  ;
+; SW[2]      ; VGA_B[2]    ; 6.403  ;    ;    ; 6.403  ;
+; SW[2]      ; VGA_G[2]    ; 6.903  ;    ;    ; 6.903  ;
+; SW[2]      ; VGA_R[2]    ; 7.176  ;    ;    ; 7.176  ;
+; SW[3]      ; VGA_B[3]    ; 7.217  ;    ;    ; 7.217  ;
+; SW[3]      ; VGA_G[3]    ; 7.493  ;    ;    ; 7.493  ;
+; SW[3]      ; VGA_R[3]    ; 7.723  ;    ;    ; 7.723  ;
+; SW[4]      ; VGA_B[4]    ; 7.101  ;    ;    ; 7.101  ;
+; SW[4]      ; VGA_G[4]    ; 7.550  ;    ;    ; 7.550  ;
+; SW[4]      ; VGA_R[4]    ; 7.768  ;    ;    ; 7.768  ;
+; SW[5]      ; VGA_B[5]    ; 10.682 ;    ;    ; 10.682 ;
+; SW[5]      ; VGA_G[5]    ; 11.141 ;    ;    ; 11.141 ;
+; SW[5]      ; VGA_R[5]    ; 11.370 ;    ;    ; 11.370 ;
+; SW[6]      ; VGA_B[6]    ; 6.639  ;    ;    ; 6.639  ;
+; SW[6]      ; VGA_G[6]    ; 7.139  ;    ;    ; 7.139  ;
+; SW[6]      ; VGA_R[6]    ; 7.416  ;    ;    ; 7.416  ;
+; SW[7]      ; VGA_B[7]    ; 5.377  ;    ;    ; 5.377  ;
+; SW[7]      ; VGA_G[7]    ; 5.832  ;    ;    ; 5.832  ;
+; SW[7]      ; VGA_R[7]    ; 6.067  ;    ;    ; 6.067  ;
+; SW[8]      ; VGA_B[8]    ; 5.596  ;    ;    ; 5.596  ;
+; SW[8]      ; VGA_G[8]    ; 5.642  ;    ;    ; 5.642  ;
+; SW[8]      ; VGA_R[8]    ; 5.847  ;    ;    ; 5.847  ;
+; SW[9]      ; VGA_B[9]    ; 5.680  ;    ;    ; 5.680  ;
+; SW[9]      ; VGA_G[9]    ; 5.684  ;    ;    ; 5.684  ;
+; SW[9]      ; VGA_R[9]    ; 5.890  ;    ;    ; 5.890  ;
++------------+-------------+--------+----+----+--------+
+
+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; SW[0]      ; VGA_B[0]    ; 3.564 ;    ;    ; 3.564 ;
+; SW[0]      ; VGA_G[0]    ; 3.694 ;    ;    ; 3.694 ;
+; SW[0]      ; VGA_R[0]    ; 3.897 ;    ;    ; 3.897 ;
+; SW[1]      ; VGA_B[1]    ; 3.525 ;    ;    ; 3.525 ;
+; SW[1]      ; VGA_G[1]    ; 3.653 ;    ;    ; 3.653 ;
+; SW[1]      ; VGA_R[1]    ; 3.769 ;    ;    ; 3.769 ;
+; SW[2]      ; VGA_B[2]    ; 3.377 ;    ;    ; 3.377 ;
+; SW[2]      ; VGA_G[2]    ; 3.618 ;    ;    ; 3.618 ;
+; SW[2]      ; VGA_R[2]    ; 3.746 ;    ;    ; 3.746 ;
+; SW[3]      ; VGA_B[3]    ; 3.864 ;    ;    ; 3.864 ;
+; SW[3]      ; VGA_G[3]    ; 4.010 ;    ;    ; 4.010 ;
+; SW[3]      ; VGA_R[3]    ; 4.113 ;    ;    ; 4.113 ;
+; SW[4]      ; VGA_B[4]    ; 3.856 ;    ;    ; 3.856 ;
+; SW[4]      ; VGA_G[4]    ; 4.047 ;    ;    ; 4.047 ;
+; SW[4]      ; VGA_R[4]    ; 4.139 ;    ;    ; 4.139 ;
+; SW[5]      ; VGA_B[5]    ; 6.011 ;    ;    ; 6.011 ;
+; SW[5]      ; VGA_G[5]    ; 6.214 ;    ;    ; 6.214 ;
+; SW[5]      ; VGA_R[5]    ; 6.315 ;    ;    ; 6.315 ;
+; SW[6]      ; VGA_B[6]    ; 3.508 ;    ;    ; 3.508 ;
+; SW[6]      ; VGA_G[6]    ; 3.730 ;    ;    ; 3.730 ;
+; SW[6]      ; VGA_R[6]    ; 3.870 ;    ;    ; 3.870 ;
+; SW[7]      ; VGA_B[7]    ; 2.810 ;    ;    ; 2.810 ;
+; SW[7]      ; VGA_G[7]    ; 3.008 ;    ;    ; 3.008 ;
+; SW[7]      ; VGA_R[7]    ; 3.118 ;    ;    ; 3.118 ;
+; SW[8]      ; VGA_B[8]    ; 2.909 ;    ;    ; 2.909 ;
+; SW[8]      ; VGA_G[8]    ; 2.942 ;    ;    ; 2.942 ;
+; SW[8]      ; VGA_R[8]    ; 3.022 ;    ;    ; 3.022 ;
+; SW[9]      ; VGA_B[9]    ; 2.960 ;    ;    ; 2.960 ;
+; SW[9]      ; VGA_G[9]    ; 2.965 ;    ;    ; 2.965 ;
+; SW[9]      ; VGA_R[9]    ; 3.047 ;    ;    ; 3.047 ;
++------------+-------------+-------+----+----+-------+
+
+
++-------------------------------------------------------------------------+
+; Setup Transfers                                                         ;
++--------------+--------------+----------+----------+----------+----------+
+; From Clock   ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------+--------------+----------+----------+----------+----------+
+; VGA_CTRL_CLK ; CLOCK_50     ; 1        ; 1        ; 0        ; 0        ;
+; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0        ; 0        ; 0        ; 385      ;
++--------------+--------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------+
+; Hold Transfers                                                          ;
++--------------+--------------+----------+----------+----------+----------+
+; From Clock   ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------+--------------+----------+----------+----------+----------+
+; VGA_CTRL_CLK ; CLOCK_50     ; 1        ; 1        ; 0        ; 0        ;
+; VGA_CTRL_CLK ; VGA_CTRL_CLK ; 0        ; 0        ; 0        ; 385      ;
++--------------+--------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 53    ; 53   ;
+; Unconstrained Output Ports      ; 34    ; 34   ;
+; Unconstrained Output Port Paths ; 485   ; 485  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Oct 20 10:20:47 2021
+Info: Command: quartus_sta VGA -c VGA
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'VGA.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name VGA_CTRL_CLK VGA_CTRL_CLK
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.924
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.924       -34.017 VGA_CTRL_CLK 
+    Info (332119):     1.996         0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is -1.726
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.726        -1.726 CLOCK_50 
+    Info (332119):     0.391         0.000 VGA_CTRL_CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -2.380 CLOCK_50 
+    Info (332119):    -0.500       -22.000 VGA_CTRL_CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.400
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.400        -4.983 VGA_CTRL_CLK 
+    Info (332119):     1.353         0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is -0.973
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.973        -0.973 CLOCK_50 
+    Info (332119):     0.215         0.000 VGA_CTRL_CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -2.380 CLOCK_50 
+    Info (332119):    -0.500       -22.000 VGA_CTRL_CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4542 megabytes
+    Info: Processing ended: Wed Oct 20 10:20:48 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

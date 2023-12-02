@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'VGA_CTRL_CLK'
+Slack : -1.924
+TNS   : -34.017
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : 1.996
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -1.726
+TNS   : -1.726
+
+Type  : Slow Model Hold 'VGA_CTRL_CLK'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -2.380
+
+Type  : Slow Model Minimum Pulse Width 'VGA_CTRL_CLK'
+Slack : -0.500
+TNS   : -22.000
+
+Type  : Fast Model Setup 'VGA_CTRL_CLK'
+Slack : -0.400
+TNS   : -4.983
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : 1.353
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -0.973
+TNS   : -0.973
+
+Type  : Fast Model Hold 'VGA_CTRL_CLK'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -2.380
+
+Type  : Fast Model Minimum Pulse Width 'VGA_CTRL_CLK'
+Slack : -0.500
+TNS   : -22.000
+
+------------------------------------------------------------

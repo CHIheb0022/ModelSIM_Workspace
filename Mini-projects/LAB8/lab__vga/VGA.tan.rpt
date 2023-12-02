@@ -1,0 +1,731 @@
+Classic Timing Analyzer report for VGA
+Thu Nov 03 00:37:12 2011
+Quartus II Version 10.0 Build 218 06/27/2010 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Classic Timing Analyzer Deprecation
+  3. Timing Analyzer Summary
+  4. Timing Analyzer Settings
+  5. Clock Settings Summary
+  6. Parallel Compilation
+  7. Clock Setup: 'CLOCK_50'
+  8. tsu
+  9. tco
+ 10. tpd
+ 11. th
+ 12. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
+---------------------------------------
+; Classic Timing Analyzer Deprecation ;
+---------------------------------------
+Classic Timing Analyzer will not be available in a future release of the Quartus II software. Use the TimeQuest Timing Analyzer to run timing analysis on your design. Convert all the project settings and the timing constraints to TimeQuest Timing Analyzer equivalents.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                      ;
++------------------------------+-------+---------------+----------------------------------+--------------------+------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From               ; To                     ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------------------+------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 2.112 ns                         ; reset              ; VGA:VGA1|H_Cont[8]     ; --         ; CLOCK_50 ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 16.110 ns                        ; VGA:VGA1|V_Cont[8] ; VGA_R[1]               ; CLOCK_50   ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 11.536 ns                        ; SW[5]              ; VGA_R[5]               ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -0.120 ns                        ; reset              ; VGA:VGA1|oVGA_H_SYNC_s ; --         ; CLOCK_50 ; 0            ;
+; Clock Setup: 'CLOCK_50'      ; N/A   ; None          ; 303.12 MHz ( period = 3.299 ns ) ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                    ;                        ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------------------+------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK_50        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK_50'                                                                                                                                                                                                                                 ;
++-----------------------------------------+-----------------------------------------------------+--------------------+------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From               ; To                     ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+--------------------+------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 303.12 MHz ( period = 3.299 ns )                    ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 303.12 MHz ( period = 3.299 ns )                    ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 303.12 MHz ( period = 3.299 ns )                    ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 303.12 MHz ( period = 3.299 ns )                    ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 303.12 MHz ( period = 3.299 ns )                    ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 303.12 MHz ( period = 3.299 ns )                    ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 303.12 MHz ( period = 3.299 ns )                    ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 303.12 MHz ( period = 3.299 ns )                    ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 303.12 MHz ( period = 3.299 ns )                    ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 303.12 MHz ( period = 3.299 ns )                    ; VGA:VGA1|V_Cont[8] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.085 ns                ;
+; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; VGA:VGA1|V_Cont[6] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.934 ns                ;
+; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; VGA:VGA1|V_Cont[6] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.934 ns                ;
+; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; VGA:VGA1|V_Cont[6] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.934 ns                ;
+; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; VGA:VGA1|V_Cont[6] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.934 ns                ;
+; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; VGA:VGA1|V_Cont[6] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.934 ns                ;
+; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; VGA:VGA1|V_Cont[6] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.934 ns                ;
+; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; VGA:VGA1|V_Cont[6] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.934 ns                ;
+; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; VGA:VGA1|V_Cont[6] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.934 ns                ;
+; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; VGA:VGA1|V_Cont[6] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.934 ns                ;
+; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; VGA:VGA1|V_Cont[6] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.934 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.927 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.927 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.927 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.927 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.927 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.927 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.927 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.927 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.927 ns                ;
+; N/A                                     ; 318.37 MHz ( period = 3.141 ns )                    ; VGA:VGA1|V_Cont[7] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.927 ns                ;
+; N/A                                     ; 327.44 MHz ( period = 3.054 ns )                    ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.44 MHz ( period = 3.054 ns )                    ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.44 MHz ( period = 3.054 ns )                    ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.44 MHz ( period = 3.054 ns )                    ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.44 MHz ( period = 3.054 ns )                    ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.44 MHz ( period = 3.054 ns )                    ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.44 MHz ( period = 3.054 ns )                    ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.44 MHz ( period = 3.054 ns )                    ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.44 MHz ( period = 3.054 ns )                    ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.44 MHz ( period = 3.054 ns )                    ; VGA:VGA1|V_Cont[3] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 331.56 MHz ( period = 3.016 ns )                    ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.802 ns                ;
+; N/A                                     ; 331.56 MHz ( period = 3.016 ns )                    ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.802 ns                ;
+; N/A                                     ; 331.56 MHz ( period = 3.016 ns )                    ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.802 ns                ;
+; N/A                                     ; 331.56 MHz ( period = 3.016 ns )                    ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.802 ns                ;
+; N/A                                     ; 331.56 MHz ( period = 3.016 ns )                    ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.802 ns                ;
+; N/A                                     ; 331.56 MHz ( period = 3.016 ns )                    ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.802 ns                ;
+; N/A                                     ; 331.56 MHz ( period = 3.016 ns )                    ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.802 ns                ;
+; N/A                                     ; 331.56 MHz ( period = 3.016 ns )                    ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.802 ns                ;
+; N/A                                     ; 331.56 MHz ( period = 3.016 ns )                    ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.802 ns                ;
+; N/A                                     ; 331.56 MHz ( period = 3.016 ns )                    ; VGA:VGA1|V_Cont[2] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.802 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.782 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.782 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.782 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.782 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.782 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.782 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.782 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.782 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.782 ns                ;
+; N/A                                     ; 333.78 MHz ( period = 2.996 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.782 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.38 MHz ( period = 2.964 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 342.00 MHz ( period = 2.924 ns )                    ; VGA:VGA1|V_Cont[4] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.710 ns                ;
+; N/A                                     ; 342.00 MHz ( period = 2.924 ns )                    ; VGA:VGA1|V_Cont[4] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.710 ns                ;
+; N/A                                     ; 342.00 MHz ( period = 2.924 ns )                    ; VGA:VGA1|V_Cont[4] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.710 ns                ;
+; N/A                                     ; 342.00 MHz ( period = 2.924 ns )                    ; VGA:VGA1|V_Cont[4] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.710 ns                ;
+; N/A                                     ; 342.00 MHz ( period = 2.924 ns )                    ; VGA:VGA1|V_Cont[4] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.710 ns                ;
+; N/A                                     ; 342.00 MHz ( period = 2.924 ns )                    ; VGA:VGA1|V_Cont[4] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.710 ns                ;
+; N/A                                     ; 342.00 MHz ( period = 2.924 ns )                    ; VGA:VGA1|V_Cont[4] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.710 ns                ;
+; N/A                                     ; 342.00 MHz ( period = 2.924 ns )                    ; VGA:VGA1|V_Cont[4] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.710 ns                ;
+; N/A                                     ; 342.00 MHz ( period = 2.924 ns )                    ; VGA:VGA1|V_Cont[4] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.710 ns                ;
+; N/A                                     ; 342.00 MHz ( period = 2.924 ns )                    ; VGA:VGA1|V_Cont[4] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.710 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|H_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|H_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|H_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|H_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|H_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|H_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|H_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|H_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|H_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 344.12 MHz ( period = 2.906 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|H_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.692 ns                ;
+; N/A                                     ; 345.66 MHz ( period = 2.893 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 345.66 MHz ( period = 2.893 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 345.66 MHz ( period = 2.893 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 345.66 MHz ( period = 2.893 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 345.66 MHz ( period = 2.893 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 345.66 MHz ( period = 2.893 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 345.66 MHz ( period = 2.893 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 345.66 MHz ( period = 2.893 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 345.66 MHz ( period = 2.893 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 345.66 MHz ( period = 2.893 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.679 ns                ;
+; N/A                                     ; 350.39 MHz ( period = 2.854 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 350.39 MHz ( period = 2.854 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 350.39 MHz ( period = 2.854 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 350.39 MHz ( period = 2.854 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 350.39 MHz ( period = 2.854 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 350.39 MHz ( period = 2.854 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 350.39 MHz ( period = 2.854 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 350.39 MHz ( period = 2.854 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 350.39 MHz ( period = 2.854 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 350.39 MHz ( period = 2.854 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 350.88 MHz ( period = 2.850 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|oVGA_V_SYNC_s ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.637 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGA:VGA1|H_Cont[7] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.616 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|H_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.598 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|H_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.598 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|H_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.598 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|H_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.598 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|H_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.598 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|H_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.598 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|H_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.598 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|H_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.598 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|H_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.598 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; VGA:VGA1|H_Cont[6] ; VGA:VGA1|H_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.598 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; VGA:VGA1|V_Cont[0] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.533 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; VGA:VGA1|V_Cont[0] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.533 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; VGA:VGA1|V_Cont[0] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.533 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; VGA:VGA1|V_Cont[0] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.533 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; VGA:VGA1|V_Cont[0] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.533 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; VGA:VGA1|V_Cont[0] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.533 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; VGA:VGA1|V_Cont[0] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.533 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; VGA:VGA1|V_Cont[0] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.533 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; VGA:VGA1|V_Cont[0] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.533 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; VGA:VGA1|V_Cont[0] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.533 ns                ;
+; N/A                                     ; 369.14 MHz ( period = 2.709 ns )                    ; VGA:VGA1|V_Cont[5] ; VGA:VGA1|oVGA_V_SYNC_s ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.496 ns                ;
+; N/A                                     ; 375.52 MHz ( period = 2.663 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|H_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; 375.52 MHz ( period = 2.663 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|H_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; 375.52 MHz ( period = 2.663 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|H_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; 375.52 MHz ( period = 2.663 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|H_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; 375.52 MHz ( period = 2.663 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|H_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; 375.52 MHz ( period = 2.663 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|H_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; 375.52 MHz ( period = 2.663 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|H_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; 375.52 MHz ( period = 2.663 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|H_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; 375.52 MHz ( period = 2.663 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|H_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; 375.52 MHz ( period = 2.663 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|H_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.449 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGA:VGA1|H_Cont[4] ; VGA:VGA1|oVGA_V_SYNC_s ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; VGA:VGA1|H_Cont[0] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 378.36 MHz ( period = 2.643 ns )                    ; VGA:VGA1|V_Cont[1] ; VGA:VGA1|oVGA_V_SYNC_s ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.430 ns                ;
+; N/A                                     ; 378.93 MHz ( period = 2.639 ns )                    ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.425 ns                ;
+; N/A                                     ; 378.93 MHz ( period = 2.639 ns )                    ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.425 ns                ;
+; N/A                                     ; 378.93 MHz ( period = 2.639 ns )                    ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.425 ns                ;
+; N/A                                     ; 378.93 MHz ( period = 2.639 ns )                    ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.425 ns                ;
+; N/A                                     ; 378.93 MHz ( period = 2.639 ns )                    ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.425 ns                ;
+; N/A                                     ; 378.93 MHz ( period = 2.639 ns )                    ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.425 ns                ;
+; N/A                                     ; 378.93 MHz ( period = 2.639 ns )                    ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.425 ns                ;
+; N/A                                     ; 378.93 MHz ( period = 2.639 ns )                    ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.425 ns                ;
+; N/A                                     ; 378.93 MHz ( period = 2.639 ns )                    ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.425 ns                ;
+; N/A                                     ; 378.93 MHz ( period = 2.639 ns )                    ; VGA:VGA1|H_Cont[1] ; VGA:VGA1|V_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.425 ns                ;
+; N/A                                     ; 380.37 MHz ( period = 2.629 ns )                    ; VGA:VGA1|H_Cont[5] ; VGA:VGA1|oVGA_V_SYNC_s ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.416 ns                ;
+; N/A                                     ; 385.21 MHz ( period = 2.596 ns )                    ; VGA:VGA1|V_Cont[9] ; VGA:VGA1|oVGA_V_SYNC_s ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.383 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|H_Cont[3]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|H_Cont[2]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|H_Cont[5]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|H_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|H_Cont[4]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|H_Cont[0]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|H_Cont[9]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|H_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|H_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.46 MHz ( period = 2.548 ns )                    ; VGA:VGA1|H_Cont[9] ; VGA:VGA1|H_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 392.93 MHz ( period = 2.545 ns )                    ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[6]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.331 ns                ;
+; N/A                                     ; 392.93 MHz ( period = 2.545 ns )                    ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[7]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.331 ns                ;
+; N/A                                     ; 392.93 MHz ( period = 2.545 ns )                    ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[8]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.331 ns                ;
+; N/A                                     ; 392.93 MHz ( period = 2.545 ns )                    ; VGA:VGA1|H_Cont[8] ; VGA:VGA1|V_Cont[1]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.331 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                    ;                        ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+--------------------+------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------+
+; tsu                                                                           ;
++-------+--------------+------------+-------+------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From  ; To                     ; To Clock ;
++-------+--------------+------------+-------+------------------------+----------+
+; N/A   ; None         ; 2.112 ns   ; reset ; VGA:VGA1|H_Cont[3]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.112 ns   ; reset ; VGA:VGA1|H_Cont[2]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.112 ns   ; reset ; VGA:VGA1|H_Cont[5]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.112 ns   ; reset ; VGA:VGA1|H_Cont[6]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.112 ns   ; reset ; VGA:VGA1|H_Cont[4]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.112 ns   ; reset ; VGA:VGA1|H_Cont[0]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.112 ns   ; reset ; VGA:VGA1|H_Cont[9]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.112 ns   ; reset ; VGA:VGA1|H_Cont[7]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.112 ns   ; reset ; VGA:VGA1|H_Cont[1]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.112 ns   ; reset ; VGA:VGA1|H_Cont[8]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.038 ns   ; reset ; VGA:VGA1|V_Cont[4]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.038 ns   ; reset ; VGA:VGA1|V_Cont[9]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.038 ns   ; reset ; VGA:VGA1|V_Cont[3]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.038 ns   ; reset ; VGA:VGA1|V_Cont[5]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.038 ns   ; reset ; VGA:VGA1|V_Cont[2]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.038 ns   ; reset ; VGA:VGA1|V_Cont[6]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.038 ns   ; reset ; VGA:VGA1|V_Cont[7]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.038 ns   ; reset ; VGA:VGA1|V_Cont[8]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.038 ns   ; reset ; VGA:VGA1|V_Cont[1]     ; CLOCK_50 ;
+; N/A   ; None         ; 2.038 ns   ; reset ; VGA:VGA1|V_Cont[0]     ; CLOCK_50 ;
+; N/A   ; None         ; 0.354 ns   ; reset ; VGA:VGA1|oVGA_V_SYNC_s ; CLOCK_50 ;
+; N/A   ; None         ; 0.350 ns   ; reset ; VGA:VGA1|oVGA_H_SYNC_s ; CLOCK_50 ;
++-------+--------------+------------+-------+------------------------+----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                     ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------------+----------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From               ; To       ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------------+----------+------------+
+; N/A                                     ; None                                                ; 16.110 ns  ; VGA:VGA1|V_Cont[8] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 16.093 ns  ; VGA:VGA1|V_Cont[8] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 16.074 ns  ; VGA:VGA1|V_Cont[8] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 16.053 ns  ; VGA:VGA1|V_Cont[8] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 16.021 ns  ; VGA:VGA1|V_Cont[8] ; VGA_R[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 16.000 ns  ; VGA:VGA1|V_Cont[8] ; VGA_R[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.959 ns  ; VGA:VGA1|V_Cont[6] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.952 ns  ; VGA:VGA1|V_Cont[7] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.942 ns  ; VGA:VGA1|V_Cont[6] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.935 ns  ; VGA:VGA1|V_Cont[7] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.923 ns  ; VGA:VGA1|V_Cont[6] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.916 ns  ; VGA:VGA1|V_Cont[7] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.902 ns  ; VGA:VGA1|V_Cont[6] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.895 ns  ; VGA:VGA1|V_Cont[7] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.870 ns  ; VGA:VGA1|V_Cont[6] ; VGA_R[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.863 ns  ; VGA:VGA1|V_Cont[7] ; VGA_R[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.849 ns  ; VGA:VGA1|V_Cont[6] ; VGA_R[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.842 ns  ; VGA:VGA1|V_Cont[7] ; VGA_R[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.839 ns  ; VGA:VGA1|V_Cont[8] ; VGA_G[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.825 ns  ; VGA:VGA1|V_Cont[8] ; VGA_R[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.817 ns  ; VGA:VGA1|V_Cont[8] ; VGA_G[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.811 ns  ; VGA:VGA1|V_Cont[8] ; VGA_R[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.797 ns  ; VGA:VGA1|V_Cont[8] ; VGA_G[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.797 ns  ; VGA:VGA1|V_Cont[8] ; VGA_R[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.762 ns  ; VGA:VGA1|V_Cont[8] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.753 ns  ; VGA:VGA1|V_Cont[8] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.735 ns  ; VGA:VGA1|V_Cont[4] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.718 ns  ; VGA:VGA1|V_Cont[4] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.699 ns  ; VGA:VGA1|V_Cont[4] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.688 ns  ; VGA:VGA1|V_Cont[6] ; VGA_G[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.681 ns  ; VGA:VGA1|V_Cont[7] ; VGA_G[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.678 ns  ; VGA:VGA1|V_Cont[4] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.674 ns  ; VGA:VGA1|V_Cont[6] ; VGA_R[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.667 ns  ; VGA:VGA1|V_Cont[7] ; VGA_R[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.666 ns  ; VGA:VGA1|V_Cont[6] ; VGA_G[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.660 ns  ; VGA:VGA1|V_Cont[6] ; VGA_R[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.659 ns  ; VGA:VGA1|V_Cont[7] ; VGA_G[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.653 ns  ; VGA:VGA1|V_Cont[7] ; VGA_R[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.646 ns  ; VGA:VGA1|V_Cont[6] ; VGA_G[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.646 ns  ; VGA:VGA1|V_Cont[6] ; VGA_R[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.646 ns  ; VGA:VGA1|V_Cont[4] ; VGA_R[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.639 ns  ; VGA:VGA1|V_Cont[7] ; VGA_G[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.639 ns  ; VGA:VGA1|V_Cont[7] ; VGA_R[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.625 ns  ; VGA:VGA1|V_Cont[4] ; VGA_R[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.618 ns  ; VGA:VGA1|V_Cont[8] ; VGA_G[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.611 ns  ; VGA:VGA1|V_Cont[6] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.606 ns  ; VGA:VGA1|V_Cont[8] ; VGA_G[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.604 ns  ; VGA:VGA1|V_Cont[7] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.602 ns  ; VGA:VGA1|V_Cont[6] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.600 ns  ; VGA:VGA1|V_Cont[8] ; VGA_B[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.595 ns  ; VGA:VGA1|V_Cont[7] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.587 ns  ; VGA:VGA1|V_Cont[8] ; VGA_B[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.568 ns  ; VGA:VGA1|V_Cont[9] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.566 ns  ; VGA:VGA1|V_Cont[8] ; VGA_G[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.563 ns  ; VGA:VGA1|V_Cont[9] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.560 ns  ; VGA:VGA1|V_Cont[8] ; VGA_G[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.557 ns  ; VGA:VGA1|V_Cont[8] ; VGA_B[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.554 ns  ; VGA:VGA1|V_Cont[8] ; VGA_B[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.548 ns  ; VGA:VGA1|V_Cont[8] ; VGA_B[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.532 ns  ; VGA:VGA1|V_Cont[9] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.511 ns  ; VGA:VGA1|V_Cont[9] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.510 ns  ; VGA:VGA1|V_Cont[9] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.506 ns  ; VGA:VGA1|V_Cont[9] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.496 ns  ; VGA:VGA1|V_Cont[9] ; VGA_R[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.475 ns  ; VGA:VGA1|V_Cont[9] ; VGA_R[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.467 ns  ; VGA:VGA1|V_Cont[6] ; VGA_G[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.464 ns  ; VGA:VGA1|V_Cont[4] ; VGA_G[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.460 ns  ; VGA:VGA1|V_Cont[7] ; VGA_G[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.455 ns  ; VGA:VGA1|V_Cont[6] ; VGA_G[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.450 ns  ; VGA:VGA1|V_Cont[4] ; VGA_R[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.449 ns  ; VGA:VGA1|V_Cont[6] ; VGA_B[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.448 ns  ; VGA:VGA1|V_Cont[7] ; VGA_G[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.442 ns  ; VGA:VGA1|V_Cont[7] ; VGA_B[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.442 ns  ; VGA:VGA1|V_Cont[4] ; VGA_G[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.436 ns  ; VGA:VGA1|V_Cont[6] ; VGA_B[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.436 ns  ; VGA:VGA1|V_Cont[4] ; VGA_R[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.429 ns  ; VGA:VGA1|V_Cont[7] ; VGA_B[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.422 ns  ; VGA:VGA1|V_Cont[4] ; VGA_G[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.422 ns  ; VGA:VGA1|V_Cont[4] ; VGA_R[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.415 ns  ; VGA:VGA1|V_Cont[6] ; VGA_G[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.409 ns  ; VGA:VGA1|V_Cont[6] ; VGA_G[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.408 ns  ; VGA:VGA1|V_Cont[7] ; VGA_G[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.406 ns  ; VGA:VGA1|V_Cont[6] ; VGA_B[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.403 ns  ; VGA:VGA1|V_Cont[6] ; VGA_B[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.402 ns  ; VGA:VGA1|V_Cont[7] ; VGA_G[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.399 ns  ; VGA:VGA1|V_Cont[7] ; VGA_B[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.397 ns  ; VGA:VGA1|V_Cont[6] ; VGA_B[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.396 ns  ; VGA:VGA1|V_Cont[7] ; VGA_B[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.390 ns  ; VGA:VGA1|V_Cont[7] ; VGA_B[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.387 ns  ; VGA:VGA1|V_Cont[4] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.378 ns  ; VGA:VGA1|V_Cont[4] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.356 ns  ; VGA:VGA1|V_Cont[8] ; VGA_B[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.315 ns  ; VGA:VGA1|V_Cont[8] ; VGA_G[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.310 ns  ; VGA:VGA1|V_Cont[8] ; VGA_G[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.309 ns  ; VGA:VGA1|V_Cont[9] ; VGA_G[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.294 ns  ; VGA:VGA1|V_Cont[8] ; VGA_B[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.284 ns  ; VGA:VGA1|V_Cont[8] ; VGA_B[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.283 ns  ; VGA:VGA1|V_Cont[9] ; VGA_R[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.275 ns  ; VGA:VGA1|V_Cont[9] ; VGA_G[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.272 ns  ; VGA:VGA1|V_Cont[9] ; VGA_G[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.269 ns  ; VGA:VGA1|V_Cont[9] ; VGA_R[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.268 ns  ; VGA:VGA1|V_Cont[8] ; VGA_B[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.255 ns  ; VGA:VGA1|V_Cont[9] ; VGA_R[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.251 ns  ; VGA:VGA1|V_Cont[5] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.243 ns  ; VGA:VGA1|V_Cont[4] ; VGA_G[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.234 ns  ; VGA:VGA1|V_Cont[5] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.231 ns  ; VGA:VGA1|V_Cont[4] ; VGA_G[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.225 ns  ; VGA:VGA1|V_Cont[4] ; VGA_B[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.215 ns  ; VGA:VGA1|V_Cont[5] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.212 ns  ; VGA:VGA1|V_Cont[4] ; VGA_B[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.205 ns  ; VGA:VGA1|V_Cont[6] ; VGA_B[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.198 ns  ; VGA:VGA1|V_Cont[7] ; VGA_B[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.194 ns  ; VGA:VGA1|V_Cont[5] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.191 ns  ; VGA:VGA1|V_Cont[4] ; VGA_G[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.185 ns  ; VGA:VGA1|V_Cont[4] ; VGA_G[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.182 ns  ; VGA:VGA1|V_Cont[4] ; VGA_B[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.179 ns  ; VGA:VGA1|V_Cont[4] ; VGA_B[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.173 ns  ; VGA:VGA1|V_Cont[4] ; VGA_B[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.169 ns  ; VGA:VGA1|V_Cont[5] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.165 ns  ; VGA:VGA1|V_Cont[5] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.164 ns  ; VGA:VGA1|V_Cont[6] ; VGA_G[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.162 ns  ; VGA:VGA1|V_Cont[5] ; VGA_R[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.160 ns  ; VGA:VGA1|V_Cont[1] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.159 ns  ; VGA:VGA1|V_Cont[6] ; VGA_G[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.157 ns  ; VGA:VGA1|V_Cont[7] ; VGA_G[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.155 ns  ; VGA:VGA1|V_Cont[1] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.152 ns  ; VGA:VGA1|V_Cont[7] ; VGA_G[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.143 ns  ; VGA:VGA1|V_Cont[6] ; VGA_B[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.141 ns  ; VGA:VGA1|V_Cont[5] ; VGA_R[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.136 ns  ; VGA:VGA1|V_Cont[7] ; VGA_B[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.133 ns  ; VGA:VGA1|V_Cont[6] ; VGA_B[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.126 ns  ; VGA:VGA1|V_Cont[7] ; VGA_B[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.124 ns  ; VGA:VGA1|V_Cont[1] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.121 ns  ; VGA:VGA1|H_Cont[5] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.121 ns  ; VGA:VGA1|H_Cont[5] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.117 ns  ; VGA:VGA1|V_Cont[6] ; VGA_B[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.110 ns  ; VGA:VGA1|V_Cont[7] ; VGA_B[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.103 ns  ; VGA:VGA1|V_Cont[1] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.102 ns  ; VGA:VGA1|V_Cont[1] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.098 ns  ; VGA:VGA1|V_Cont[1] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.088 ns  ; VGA:VGA1|V_Cont[1] ; VGA_R[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.083 ns  ; VGA:VGA1|H_Cont[4] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.083 ns  ; VGA:VGA1|H_Cont[4] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.076 ns  ; VGA:VGA1|V_Cont[9] ; VGA_G[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.072 ns  ; VGA:VGA1|V_Cont[9] ; VGA_G[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.067 ns  ; VGA:VGA1|V_Cont[1] ; VGA_R[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.064 ns  ; VGA:VGA1|V_Cont[8] ; VGA_B[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.064 ns  ; VGA:VGA1|V_Cont[9] ; VGA_G[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.058 ns  ; VGA:VGA1|V_Cont[9] ; VGA_B[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.054 ns  ; VGA:VGA1|V_Cont[9] ; VGA_G[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.045 ns  ; VGA:VGA1|V_Cont[9] ; VGA_B[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.041 ns  ; VGA:VGA1|V_Cont[9] ; VGA_G[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.039 ns  ; VGA:VGA1|H_Cont[5] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.029 ns  ; VGA:VGA1|H_Cont[5] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.022 ns  ; VGA:VGA1|V_Cont[2] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.021 ns  ; VGA:VGA1|H_Cont[6] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.021 ns  ; VGA:VGA1|H_Cont[6] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.018 ns  ; VGA:VGA1|V_Cont[9] ; VGA_G[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.017 ns  ; VGA:VGA1|V_Cont[2] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.015 ns  ; VGA:VGA1|V_Cont[9] ; VGA_B[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.012 ns  ; VGA:VGA1|V_Cont[9] ; VGA_B[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.012 ns  ; VGA:VGA1|V_Cont[9] ; VGA_B[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.006 ns  ; VGA:VGA1|V_Cont[9] ; VGA_B[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.004 ns  ; VGA:VGA1|H_Cont[5] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 15.001 ns  ; VGA:VGA1|H_Cont[4] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.991 ns  ; VGA:VGA1|H_Cont[4] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.986 ns  ; VGA:VGA1|V_Cont[2] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.983 ns  ; VGA:VGA1|H_Cont[5] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.981 ns  ; VGA:VGA1|V_Cont[4] ; VGA_B[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.980 ns  ; VGA:VGA1|V_Cont[5] ; VGA_G[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.966 ns  ; VGA:VGA1|V_Cont[5] ; VGA_R[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.966 ns  ; VGA:VGA1|H_Cont[4] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.965 ns  ; VGA:VGA1|V_Cont[2] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.964 ns  ; VGA:VGA1|V_Cont[2] ; VGA_R[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.961 ns  ; VGA:VGA1|H_Cont[5] ; VGA_R[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.960 ns  ; VGA:VGA1|V_Cont[2] ; VGA_R[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.958 ns  ; VGA:VGA1|V_Cont[5] ; VGA_G[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.952 ns  ; VGA:VGA1|V_Cont[5] ; VGA_R[7] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.950 ns  ; VGA:VGA1|V_Cont[2] ; VGA_R[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.945 ns  ; VGA:VGA1|H_Cont[4] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.940 ns  ; VGA:VGA1|V_Cont[4] ; VGA_G[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.939 ns  ; VGA:VGA1|H_Cont[5] ; VGA_R[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.939 ns  ; VGA:VGA1|H_Cont[6] ; VGA_R[1] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.938 ns  ; VGA:VGA1|V_Cont[5] ; VGA_G[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.938 ns  ; VGA:VGA1|V_Cont[5] ; VGA_R[8] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.935 ns  ; VGA:VGA1|V_Cont[4] ; VGA_G[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.929 ns  ; VGA:VGA1|V_Cont[2] ; VGA_R[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.929 ns  ; VGA:VGA1|H_Cont[6] ; VGA_R[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.923 ns  ; VGA:VGA1|H_Cont[4] ; VGA_R[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.919 ns  ; VGA:VGA1|V_Cont[4] ; VGA_B[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.913 ns  ; VGA:VGA1|V_Cont[6] ; VGA_B[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.909 ns  ; VGA:VGA1|V_Cont[4] ; VGA_B[3] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.906 ns  ; VGA:VGA1|V_Cont[7] ; VGA_B[5] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.904 ns  ; VGA:VGA1|H_Cont[6] ; VGA_R[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.901 ns  ; VGA:VGA1|V_Cont[1] ; VGA_G[2] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.901 ns  ; VGA:VGA1|H_Cont[4] ; VGA_R[4] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.893 ns  ; VGA:VGA1|V_Cont[4] ; VGA_B[9] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.883 ns  ; VGA:VGA1|H_Cont[6] ; VGA_G[0] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.875 ns  ; VGA:VGA1|V_Cont[1] ; VGA_R[6] ; CLOCK_50   ;
+; N/A                                     ; None                                                ; 14.867 ns  ; VGA:VGA1|V_Cont[1] ; VGA_G[1] ; CLOCK_50   ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;                    ;          ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------------+----------+------------+
+
+
++----------------------------------------------------------------+
+; tpd                                                            ;
++-------+-------------------+-----------------+-------+----------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From  ; To       ;
++-------+-------------------+-----------------+-------+----------+
+; N/A   ; None              ; 11.536 ns       ; SW[5] ; VGA_R[5] ;
+; N/A   ; None              ; 11.098 ns       ; SW[5] ; VGA_G[5] ;
+; N/A   ; None              ; 10.847 ns       ; SW[5] ; VGA_B[5] ;
+; N/A   ; None              ; 7.627 ns        ; SW[3] ; VGA_R[3] ;
+; N/A   ; None              ; 7.475 ns        ; SW[1] ; VGA_R[1] ;
+; N/A   ; None              ; 7.403 ns        ; SW[3] ; VGA_G[3] ;
+; N/A   ; None              ; 7.375 ns        ; SW[4] ; VGA_R[4] ;
+; N/A   ; None              ; 7.342 ns        ; SW[0] ; VGA_R[0] ;
+; N/A   ; None              ; 7.321 ns        ; SW[0] ; VGA_G[0] ;
+; N/A   ; None              ; 7.230 ns        ; SW[2] ; VGA_R[2] ;
+; N/A   ; None              ; 7.182 ns        ; SW[1] ; VGA_G[1] ;
+; N/A   ; None              ; 7.123 ns        ; SW[6] ; VGA_R[6] ;
+; N/A   ; None              ; 6.976 ns        ; SW[2] ; VGA_G[2] ;
+; N/A   ; None              ; 6.952 ns        ; SW[1] ; VGA_B[1] ;
+; N/A   ; None              ; 6.941 ns        ; SW[4] ; VGA_G[4] ;
+; N/A   ; None              ; 6.890 ns        ; SW[3] ; VGA_B[3] ;
+; N/A   ; None              ; 6.868 ns        ; SW[0] ; VGA_B[0] ;
+; N/A   ; None              ; 6.858 ns        ; SW[6] ; VGA_G[6] ;
+; N/A   ; None              ; 6.852 ns        ; SW[6] ; VGA_B[6] ;
+; N/A   ; None              ; 6.731 ns        ; SW[4] ; VGA_B[4] ;
+; N/A   ; None              ; 6.431 ns        ; SW[2] ; VGA_B[2] ;
+; N/A   ; None              ; 6.293 ns        ; SW[9] ; VGA_R[9] ;
+; N/A   ; None              ; 5.949 ns        ; SW[8] ; VGA_R[8] ;
+; N/A   ; None              ; 5.901 ns        ; SW[7] ; VGA_R[7] ;
+; N/A   ; None              ; 5.841 ns        ; SW[9] ; VGA_G[9] ;
+; N/A   ; None              ; 5.799 ns        ; SW[9] ; VGA_B[9] ;
+; N/A   ; None              ; 5.770 ns        ; SW[8] ; VGA_G[8] ;
+; N/A   ; None              ; 5.700 ns        ; SW[8] ; VGA_B[8] ;
+; N/A   ; None              ; 5.696 ns        ; SW[7] ; VGA_G[7] ;
+; N/A   ; None              ; 5.647 ns        ; SW[7] ; VGA_B[7] ;
++-------+-------------------+-----------------+-------+----------+
+
+
++-------------------------------------------------------------------------------------+
+; th                                                                                  ;
++---------------+-------------+-----------+-------+------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From  ; To                     ; To Clock ;
++---------------+-------------+-----------+-------+------------------------+----------+
+; N/A           ; None        ; -0.120 ns ; reset ; VGA:VGA1|oVGA_H_SYNC_s ; CLOCK_50 ;
+; N/A           ; None        ; -0.124 ns ; reset ; VGA:VGA1|oVGA_V_SYNC_s ; CLOCK_50 ;
+; N/A           ; None        ; -1.048 ns ; reset ; VGA:VGA1|V_Cont[4]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.048 ns ; reset ; VGA:VGA1|V_Cont[9]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.048 ns ; reset ; VGA:VGA1|V_Cont[3]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.048 ns ; reset ; VGA:VGA1|V_Cont[5]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.048 ns ; reset ; VGA:VGA1|V_Cont[2]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.048 ns ; reset ; VGA:VGA1|V_Cont[6]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.048 ns ; reset ; VGA:VGA1|V_Cont[7]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.048 ns ; reset ; VGA:VGA1|V_Cont[8]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.048 ns ; reset ; VGA:VGA1|V_Cont[1]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.048 ns ; reset ; VGA:VGA1|V_Cont[0]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.482 ns ; reset ; VGA:VGA1|H_Cont[3]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.482 ns ; reset ; VGA:VGA1|H_Cont[2]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.482 ns ; reset ; VGA:VGA1|H_Cont[5]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.482 ns ; reset ; VGA:VGA1|H_Cont[6]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.482 ns ; reset ; VGA:VGA1|H_Cont[4]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.482 ns ; reset ; VGA:VGA1|H_Cont[0]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.482 ns ; reset ; VGA:VGA1|H_Cont[9]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.482 ns ; reset ; VGA:VGA1|H_Cont[7]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.482 ns ; reset ; VGA:VGA1|H_Cont[1]     ; CLOCK_50 ;
+; N/A           ; None        ; -1.482 ns ; reset ; VGA:VGA1|H_Cont[8]     ; CLOCK_50 ;
++---------------+-------------+-----------+-------+------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 10.0 Build 218 06/27/2010 SJ Web Edition
+    Info: Processing started: Thu Nov 03 00:37:12 2011
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off VGA -c VGA --timing_analysis_only
+Warning: Classic Timing Analyzer will not be available in a future release of the Quartus II software. Use the TimeQuest Timing Analyzer to run timing analysis on your design. Convert all the project settings and the timing constraints to TimeQuest Timing Analyzer equivalents.
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK_50" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "VGA_CTRL_CLK" as buffer
+Info: Clock "CLOCK_50" has Internal fmax of 303.12 MHz between source register "VGA:VGA1|V_Cont[8]" and destination register "VGA:VGA1|V_Cont[4]" (period= 3.299 ns)
+    Info: + Longest register to register delay is 3.085 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X11_Y30_N19; Fanout = 4; REG Node = 'VGA:VGA1|V_Cont[8]'
+        Info: 2: + IC(0.761 ns) + CELL(0.275 ns) = 1.036 ns; Loc. = LCCOMB_X12_Y30_N10; Fanout = 3; COMB Node = 'VGA:VGA1|V_Cont[9]~10'
+        Info: 3: + IC(0.452 ns) + CELL(0.275 ns) = 1.763 ns; Loc. = LCCOMB_X11_Y30_N26; Fanout = 1; COMB Node = 'VGA:VGA1|V_Cont[9]~21'
+        Info: 4: + IC(0.243 ns) + CELL(0.150 ns) = 2.156 ns; Loc. = LCCOMB_X11_Y30_N28; Fanout = 10; COMB Node = 'VGA:VGA1|V_Cont[9]~22'
+        Info: 5: + IC(0.419 ns) + CELL(0.510 ns) = 3.085 ns; Loc. = LCFF_X11_Y30_N11; Fanout = 4; REG Node = 'VGA:VGA1|V_Cont[4]'
+        Info: Total cell delay = 1.210 ns ( 39.22 % )
+        Info: Total interconnect delay = 1.875 ns ( 60.78 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CLOCK_50" to destination register is 6.802 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'CLOCK_50'
+            Info: 2: + IC(1.616 ns) + CELL(0.787 ns) = 3.402 ns; Loc. = LCFF_X12_Y30_N25; Fanout = 3; REG Node = 'VGA_CTRL_CLK'
+            Info: 3: + IC(1.850 ns) + CELL(0.000 ns) = 5.252 ns; Loc. = CLKCTRL_G10; Fanout = 22; COMB Node = 'VGA_CTRL_CLK~clkctrl'
+            Info: 4: + IC(1.013 ns) + CELL(0.537 ns) = 6.802 ns; Loc. = LCFF_X11_Y30_N11; Fanout = 4; REG Node = 'VGA:VGA1|V_Cont[4]'
+            Info: Total cell delay = 2.323 ns ( 34.15 % )
+            Info: Total interconnect delay = 4.479 ns ( 65.85 % )
+        Info: - Longest clock path from clock "CLOCK_50" to source register is 6.802 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'CLOCK_50'
+            Info: 2: + IC(1.616 ns) + CELL(0.787 ns) = 3.402 ns; Loc. = LCFF_X12_Y30_N25; Fanout = 3; REG Node = 'VGA_CTRL_CLK'
+            Info: 3: + IC(1.850 ns) + CELL(0.000 ns) = 5.252 ns; Loc. = CLKCTRL_G10; Fanout = 22; COMB Node = 'VGA_CTRL_CLK~clkctrl'
+            Info: 4: + IC(1.013 ns) + CELL(0.537 ns) = 6.802 ns; Loc. = LCFF_X11_Y30_N19; Fanout = 4; REG Node = 'VGA:VGA1|V_Cont[8]'
+            Info: Total cell delay = 2.323 ns ( 34.15 % )
+            Info: Total interconnect delay = 4.479 ns ( 65.85 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "VGA:VGA1|H_Cont[3]" (data pin = "reset", clock pin = "CLOCK_50") is 2.112 ns
+    Info: + Longest pin to register delay is 8.950 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.862 ns) = 0.862 ns; Loc. = PIN_G26; Fanout = 8; PIN Node = 'reset'
+        Info: 2: + IC(6.115 ns) + CELL(0.438 ns) = 7.415 ns; Loc. = LCCOMB_X12_Y30_N22; Fanout = 1; COMB Node = 'VGA:VGA1|H_Cont[9]~20'
+        Info: 3: + IC(0.245 ns) + CELL(0.150 ns) = 7.810 ns; Loc. = LCCOMB_X12_Y30_N4; Fanout = 10; COMB Node = 'VGA:VGA1|H_Cont[9]~21'
+        Info: 4: + IC(0.630 ns) + CELL(0.510 ns) = 8.950 ns; Loc. = LCFF_X10_Y30_N9; Fanout = 3; REG Node = 'VGA:VGA1|H_Cont[3]'
+        Info: Total cell delay = 1.960 ns ( 21.90 % )
+        Info: Total interconnect delay = 6.990 ns ( 78.10 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "CLOCK_50" to destination register is 6.802 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(1.616 ns) + CELL(0.787 ns) = 3.402 ns; Loc. = LCFF_X12_Y30_N25; Fanout = 3; REG Node = 'VGA_CTRL_CLK'
+        Info: 3: + IC(1.850 ns) + CELL(0.000 ns) = 5.252 ns; Loc. = CLKCTRL_G10; Fanout = 22; COMB Node = 'VGA_CTRL_CLK~clkctrl'
+        Info: 4: + IC(1.013 ns) + CELL(0.537 ns) = 6.802 ns; Loc. = LCFF_X10_Y30_N9; Fanout = 3; REG Node = 'VGA:VGA1|H_Cont[3]'
+        Info: Total cell delay = 2.323 ns ( 34.15 % )
+        Info: Total interconnect delay = 4.479 ns ( 65.85 % )
+Info: tco from clock "CLOCK_50" to destination pin "VGA_R[1]" through register "VGA:VGA1|V_Cont[8]" is 16.110 ns
+    Info: + Longest clock path from clock "CLOCK_50" to source register is 6.802 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(1.616 ns) + CELL(0.787 ns) = 3.402 ns; Loc. = LCFF_X12_Y30_N25; Fanout = 3; REG Node = 'VGA_CTRL_CLK'
+        Info: 3: + IC(1.850 ns) + CELL(0.000 ns) = 5.252 ns; Loc. = CLKCTRL_G10; Fanout = 22; COMB Node = 'VGA_CTRL_CLK~clkctrl'
+        Info: 4: + IC(1.013 ns) + CELL(0.537 ns) = 6.802 ns; Loc. = LCFF_X11_Y30_N19; Fanout = 4; REG Node = 'VGA:VGA1|V_Cont[8]'
+        Info: Total cell delay = 2.323 ns ( 34.15 % )
+        Info: Total interconnect delay = 4.479 ns ( 65.85 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 9.058 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X11_Y30_N19; Fanout = 4; REG Node = 'VGA:VGA1|V_Cont[8]'
+        Info: 2: + IC(0.761 ns) + CELL(0.275 ns) = 1.036 ns; Loc. = LCCOMB_X12_Y30_N10; Fanout = 3; COMB Node = 'VGA:VGA1|V_Cont[9]~10'
+        Info: 3: + IC(1.177 ns) + CELL(0.420 ns) = 2.633 ns; Loc. = LCCOMB_X12_Y30_N8; Fanout = 10; COMB Node = 'VGA:VGA1|LessThan5~0'
+        Info: 4: + IC(1.813 ns) + CELL(0.413 ns) = 4.859 ns; Loc. = LCCOMB_X27_Y33_N18; Fanout = 3; COMB Node = 'VGA:VGA1|oVGA_R[1]~2'
+        Info: 5: + IC(1.421 ns) + CELL(2.778 ns) = 9.058 ns; Loc. = PIN_F10; Fanout = 0; PIN Node = 'VGA_R[1]'
+        Info: Total cell delay = 3.886 ns ( 42.90 % )
+        Info: Total interconnect delay = 5.172 ns ( 57.10 % )
+Info: Longest tpd from source pin "SW[5]" to destination pin "VGA_R[5]" is 11.536 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.840 ns) = 0.840 ns; Loc. = PIN_AD15; Fanout = 1; PIN Node = 'SW[5]'
+    Info: 2: + IC(6.288 ns) + CELL(0.275 ns) = 7.403 ns; Loc. = LCCOMB_X27_Y33_N2; Fanout = 3; COMB Node = 'VGA:VGA1|oVGA_R[5]~6'
+    Info: 3: + IC(1.335 ns) + CELL(2.798 ns) = 11.536 ns; Loc. = PIN_A8; Fanout = 0; PIN Node = 'VGA_R[5]'
+    Info: Total cell delay = 3.913 ns ( 33.92 % )
+    Info: Total interconnect delay = 7.623 ns ( 66.08 % )
+Info: th for register "VGA:VGA1|oVGA_H_SYNC_s" (data pin = "reset", clock pin = "CLOCK_50") is -0.120 ns
+    Info: + Longest clock path from clock "CLOCK_50" to destination register is 6.803 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 1; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(1.616 ns) + CELL(0.787 ns) = 3.402 ns; Loc. = LCFF_X12_Y30_N25; Fanout = 3; REG Node = 'VGA_CTRL_CLK'
+        Info: 3: + IC(1.850 ns) + CELL(0.000 ns) = 5.252 ns; Loc. = CLKCTRL_G10; Fanout = 22; COMB Node = 'VGA_CTRL_CLK~clkctrl'
+        Info: 4: + IC(1.014 ns) + CELL(0.537 ns) = 6.803 ns; Loc. = LCFF_X12_Y30_N1; Fanout = 2; REG Node = 'VGA:VGA1|oVGA_H_SYNC_s'
+        Info: Total cell delay = 2.323 ns ( 34.15 % )
+        Info: Total interconnect delay = 4.480 ns ( 65.85 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 7.189 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.862 ns) = 0.862 ns; Loc. = PIN_G26; Fanout = 8; PIN Node = 'reset'
+        Info: 2: + IC(6.093 ns) + CELL(0.150 ns) = 7.105 ns; Loc. = LCCOMB_X12_Y30_N0; Fanout = 1; COMB Node = 'VGA:VGA1|oVGA_H_SYNC_s~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 7.189 ns; Loc. = LCFF_X12_Y30_N1; Fanout = 2; REG Node = 'VGA:VGA1|oVGA_H_SYNC_s'
+        Info: Total cell delay = 1.096 ns ( 15.25 % )
+        Info: Total interconnect delay = 6.093 ns ( 84.75 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 205 megabytes
+    Info: Processing ended: Thu Nov 03 00:37:13 2011
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
